@@ -26,11 +26,21 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3f92a16-7932-4b0c-bab5-6323838a04f2" name="Default Changelist" comment="" />
+    <list default="true" id="b3f92a16-7932-4b0c-bab5-6323838a04f2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/PortfolioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/PortfolioApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/getCurrentCoinPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/getCurrentCoinPrice.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,12 +58,35 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/.idea/libraries" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/.idea/libraries" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="getCurrentCoinPrice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.petProject.portfolio.service.getCurrentCoinPrice" />
+      <module name="portfolio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.petProject.portfolio.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.getCurrentCoinPrice" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -93,5 +126,35 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1398" height="228" key="GridCell.Tab.0.bottom" timestamp="1636043524219">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="228" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1636043524219" />
+    <state width="1398" height="228" key="GridCell.Tab.0.center" timestamp="1636043524218">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="228" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1636043524218" />
+    <state width="1398" height="228" key="GridCell.Tab.0.left" timestamp="1636043524217">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="228" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1636043524217" />
+    <state width="1398" height="228" key="GridCell.Tab.0.right" timestamp="1636043524218">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="228" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1636043524218" />
+    <state x="258" y="121" key="Maven.ArtifactSearchDialog" timestamp="1636042360615">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="258" y="121" key="Maven.ArtifactSearchDialog/0.25.1440.875@0.25.1440.875" timestamp="1636042360615" />
+    <state x="208" y="41" key="SettingsEditor" timestamp="1636041264466">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="208" y="41" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1636041264466" />
+    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1636042112340">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1636042112340" />
   </component>
 </project>
