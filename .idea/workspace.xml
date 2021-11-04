@@ -26,14 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3f92a16-7932-4b0c-bab5-6323838a04f2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/PortfolioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/PortfolioApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/getCurrentCoinPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/getCurrentCoinPrice.java" afterDir="false" />
-    </list>
+    <list default="true" id="b3f92a16-7932-4b0c-bab5-6323838a04f2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +51,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -128,22 +122,22 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="228" key="GridCell.Tab.0.bottom" timestamp="1636043524219">
+    <state width="1398" height="228" key="GridCell.Tab.0.bottom" timestamp="1636044034291">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1636043524219" />
-    <state width="1398" height="228" key="GridCell.Tab.0.center" timestamp="1636043524218">
+    <state width="1398" height="228" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1636044034291" />
+    <state width="1398" height="228" key="GridCell.Tab.0.center" timestamp="1636044034291">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1636043524218" />
-    <state width="1398" height="228" key="GridCell.Tab.0.left" timestamp="1636043524217">
+    <state width="1398" height="228" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1636044034291" />
+    <state width="1398" height="228" key="GridCell.Tab.0.left" timestamp="1636044034290">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1636043524217" />
-    <state width="1398" height="228" key="GridCell.Tab.0.right" timestamp="1636043524218">
+    <state width="1398" height="228" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1636044034290" />
+    <state width="1398" height="228" key="GridCell.Tab.0.right" timestamp="1636044034291">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1636043524218" />
+    <state width="1398" height="228" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1636044034291" />
     <state x="258" y="121" key="Maven.ArtifactSearchDialog" timestamp="1636042360615">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
