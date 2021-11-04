@@ -1,6 +1,6 @@
 package com.petProject.portfolio.model;
 
-import com.petProject.portfolio.service.getCurrentCoinPrice;
+import com.petProject.portfolio.service.GetCurrentCoinPrice;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class CoinList {
 
     private HashMap<String, BigDecimal> coinList;
-    private getCurrentCoinPrice getCurrentCoinPrice;
+    private GetCurrentCoinPrice getCurrentCoinPrice;
 
     public void setCoinList(HashMap<String, BigDecimal> coinList) {
         this.coinList = coinList;

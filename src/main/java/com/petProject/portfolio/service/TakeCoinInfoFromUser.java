@@ -4,7 +4,7 @@ import com.petProject.portfolio.model.User;
 
 import java.math.BigDecimal;
 
-public class takeCoinInfoFromUser {
+public class TakeCoinInfoFromUser {
 
     private User user;
 

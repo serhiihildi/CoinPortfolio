@@ -1,6 +1,6 @@
 package com.petProject.portfolio.service;
 
-public class testMethods {
+public class TestMethods {
 
     private String coinName;
     private float buyPrice;

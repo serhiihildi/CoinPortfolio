@@ -9,7 +9,7 @@ public class CoinController {
     private CoinView view;
 
     public void setCoin(String coinName) {
-        model.setCoinName(coinName);
+//        model.setSymbol(coinName);
     }
 
     public Coin getModel() {
@@ -23,8 +23,4 @@ public class CoinController {
         this.model = model;
         this.view = view;
     }
-
-//    public void updateView() {
-//        view.printCoinDetails(model.getCoinName(), model.getCoinCurrentPrice());
-//    }
 }
