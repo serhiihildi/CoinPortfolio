@@ -1,10 +1,10 @@
-package com.petProject.portfolio.service;
+package com.CoinPortfolio.portfolio.service;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MathService {
+public class CoinService {
     private HashMap<String, BigDecimal> coinHashMap;
 
     public HashMap<String, BigDecimal> getCoinHashMap() {
@@ -30,7 +30,7 @@ public class MathService {
         return userBuyPrice.multiply(userCoinVolume);
     }
 
-    public BigDecimal getActualCoinPriceBySymbol(String symbol) {
+    public BigDecimal getActualCoinPriceBySymbol(String symbol, HashMap<String, BigDecimal> coinHashMap) {
         BigDecimal value = null;
         for (Map.Entry<String, BigDecimal> entry : coinHashMap.entrySet()) {
             if (entry.getKey().equals(symbol)) {

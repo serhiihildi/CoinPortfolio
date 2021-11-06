@@ -1,4 +1,4 @@
-package com.petProject.portfolio;
+package com.CoinPortfolio.portfolio;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

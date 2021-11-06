@@ -1,6 +1,6 @@
-package com.petProject.portfolio.service;
+package com.CoinPortfolio.portfolio.service;
 
-import com.petProject.portfolio.model.User;
+import com.CoinPortfolio.portfolio.model.User;
 
 import java.math.BigDecimal;
 

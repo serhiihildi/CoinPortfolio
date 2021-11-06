@@ -1,7 +1,7 @@
-package com.petProject.portfolio.сontrollers;
+package com.CoinPortfolio.portfolio.сontrollers;
 
-import com.petProject.portfolio.view.CoinView;
-import com.petProject.portfolio.model.Coin;
+import com.CoinPortfolio.portfolio.view.CoinView;
+import com.CoinPortfolio.portfolio.model.Coin;
 
 public class CoinController {
 

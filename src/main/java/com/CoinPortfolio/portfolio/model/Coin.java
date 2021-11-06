@@ -1,34 +1,31 @@
-package com.petProject.portfolio.model;
+package com.CoinPortfolio.portfolio.model;
 
-import com.petProject.portfolio.service.MathService;
+import com.CoinPortfolio.portfolio.service.CoinService;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
 
 public class Coin {
 
-    private String symbol;
+    private final String symbol;
     // BidDecimal с актуальной котировкой
     private BigDecimal actualPrice;
     // Цена покупки
-    private BigDecimal userBuyPrice;
+    private final BigDecimal userBuyPrice;
     // Количество монет
-    private BigDecimal userCoinVolume;
+    private final BigDecimal userCoinVolume;
     // Начальная стоимость актива
     private BigDecimal userInvestment;
     // Последняя стоимость инвестиций. Сколько на данный момент стоимость актива.
     private BigDecimal lastInvestmentCost;
-    // Прибыль
-    private BigDecimal profit;
-    // На сколько процентов изменился профит
-    private BigDecimal profitPercent;
-    private MathService service = new MathService();
+    private final CoinService service = new CoinService();
     private HashMap<String, BigDecimal> coinHashMap;
 
-    public Coin(String symbol, BigDecimal userBuyPrice, BigDecimal userCoinVolume) {
+    public Coin(String symbol, BigDecimal userBuyPrice, BigDecimal userCoinVolume, HashMap<String, BigDecimal> coinHashMap) {
         this.symbol = symbol;
         this.userBuyPrice = userBuyPrice;
         this.userCoinVolume = userCoinVolume;
+        setCoinHashMap(coinHashMap);
     }
 
     public String getSymbol() {
@@ -43,8 +40,12 @@ public class Coin {
         return userCoinVolume;
     }
 
+    public void setCoinHashMap(HashMap<String, BigDecimal> coinHashMap) {
+        this.coinHashMap = coinHashMap;
+    }
+
     public BigDecimal getActualPrice() {
-        actualPrice = service.getActualCoinPriceBySymbol(symbol);
+        actualPrice = service.getActualCoinPriceBySymbol(symbol, coinHashMap);
         return actualPrice;
     }
 
@@ -59,18 +60,16 @@ public class Coin {
     }
 
     public BigDecimal getProfit() {
-        profit = service.getProfitNumber(lastInvestmentCost, userInvestment);
-        return profit;
+        // Прибыль
+        return service.getProfitNumber(lastInvestmentCost, userInvestment);
     }
 
     public BigDecimal getProfitPercent() {
-        profitPercent = service.getProfitPercent(actualPrice,userBuyPrice);
-        return profitPercent;
+        // На сколько процентов изменился профит
+        return service.getProfitPercent(actualPrice, userBuyPrice);
     }
 
     public void getCoinInfo (){
-        coinHashMap = service.getCoinHashMap();
-
         System.out.println("Монета: " + getSymbol());
         System.out.println("Инвестиция: " + getUserInvestment());
         System.out.println("Цена покупки: " + getUserBuyPrice());

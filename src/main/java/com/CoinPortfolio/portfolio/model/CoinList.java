@@ -1,6 +1,6 @@
-package com.petProject.portfolio.model;
+package com.CoinPortfolio.portfolio.model;
 
-import com.petProject.portfolio.service.GetCurrentCoinPrice;
+import com.CoinPortfolio.portfolio.service.GetCurrentCoinPrice;
 
 import java.math.BigDecimal;
 import java.util.HashMap;

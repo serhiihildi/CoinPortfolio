@@ -1,4 +1,6 @@
-package com.petProject.portfolio.model;
+package com.CoinPortfolio.portfolio.model;
+
+import com.CoinPortfolio.portfolio.service.PortfolioService;
 
 import java.util.Objects;
 
@@ -6,7 +8,7 @@ public class User {
 
     private String name;
     private String password;
-    private Portfolio userPortfolio;
+    private PortfolioService userPortfolio;
 
     public User() {
     }
@@ -36,11 +38,11 @@ public class User {
         this.password = password;
     }
 
-    public Portfolio getUserPortfolio() {
+    public PortfolioService getUserPortfolio() {
         return userPortfolio;
     }
 
-    public void setUserPortfolio(Portfolio userPortfolio) {
+    public void setUserPortfolio(PortfolioService userPortfolio) {
         this.userPortfolio = userPortfolio;
     }
 

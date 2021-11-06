@@ -27,24 +27,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f92a16-7932-4b0c-bab5-6323838a04f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/MathService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/CoinPortfolio.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Portfolio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/PortfolioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/model/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/model/Coin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/model/CoinList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/model/CoinList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/model/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/model/Portfolio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/getCurrentCoinPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/GetCurrentCoinPrice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/takeCoinInfoFromUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/TakeCoinInfoFromUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/testMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/TestMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/сontrollers/CoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/сontrollers/CoinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/model/Coin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/model/Coin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/model/CoinList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/model/CoinList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/model/Portfolio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/model/Portfolio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/service/getCurrentCoinPrice$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/service/getCurrentCoinPrice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/service/getCurrentCoinPrice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/service/takeCoinInfoFromUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/service/takeCoinInfoFromUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/service/testMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/service/testMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/сontrollers/CoinController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/petProject/portfolio/сontrollers/CoinController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/PortfolioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/PortfolioApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/ServletInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/model/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Coin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/model/CoinList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/CoinList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/model/Portfolio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/GetCurrentCoinPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/GetCurrentCoinPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/MathService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/CoinService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/TakeCoinInfoFromUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/TakeCoinInfoFromUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/service/TestMethods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/view/CoinView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/view/CoinView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petProject/portfolio/сontrollers/CoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/сontrollers/CoinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/petProject/portfolio/PortfolioApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CoinPortfolio/portfolio/PortfolioApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,9 +85,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -88,13 +95,26 @@
       <recent name="$PROJECT_DIR$/.idea/libraries" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Portfolio">
+  <component name="RunManager" selected="Application.PortfolioService">
+    <configuration name="CoinService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.portfolio.service.CoinService" />
+      <module name="portfolio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.CoinPortfolio.portfolio.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GetCurrentCoinPrice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.petProject.portfolio.service.GetCurrentCoinPrice" />
-      <module name="portfolio" />
+      <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.portfolio.service.GetCurrentCoinPrice" />
+      <module name="CoinPortfolio" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.petProject.portfolio.service.*" />
+          <option name="PATTERN" value="com.CoinPortfolio.portfolio.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MathService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.petProject.portfolio.service.MathService" />
+    <configuration name="PortfolioService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.portfolio.service.PortfolioService" />
       <module name="portfolio" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.petProject.portfolio.service.*" />
+          <option name="PATTERN" value="com.CoinPortfolio.portfolio.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,23 +135,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Portfolio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.petProject.portfolio.model.Portfolio" />
-      <module name="portfolio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.petProject.portfolio.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.GetCurrentCoinPrice" />
+      <item itemvalue="Application.CoinService" />
+      <item itemvalue="Application.PortfolioService" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Portfolio" />
-        <item itemvalue="Application.MathService" />
+        <item itemvalue="Application.PortfolioService" />
+        <item itemvalue="Application.CoinService" />
         <item itemvalue="Application.GetCurrentCoinPrice" />
       </list>
     </recent_temporary>
@@ -152,6 +187,31 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -171,64 +231,110 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="161" key="#com.intellij.ide.util.MemberChooser" timestamp="1636061042111">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="384" y="79" key="#Portfolio" timestamp="1636066830014">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="384" y="79" key="#Portfolio/0.25.1440.875@0.25.1440.875" timestamp="1636066830014" />
+    <state x="216" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1636066957538">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="216" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.875@0.25.1440.875" timestamp="1636066957538" />
+    <state x="507" y="171" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1636066828834">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="507" y="171" key="#com.intellij.ide.macro.MacrosDialog/0.25.1440.875@0.25.1440.875" timestamp="1636066828834" />
+    <state x="533" y="182" key="#com.intellij.ide.util.MemberChooser" timestamp="1636124624739">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="533" y="161" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1636061042111" />
-    <state x="533" y="182" key="#com.intellij.ide.util.MemberChooser/0.25.1440.875@0.25.1440.875" timestamp="1636058744153" />
-    <state width="1398" height="268" key="GridCell.Tab.0.bottom" timestamp="1636064151776">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="533" y="182" key="#com.intellij.ide.util.MemberChooser/0.25.1440.875@0.25.1440.875" timestamp="1636124624739" />
+    <state x="491" y="335" width="467" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1636122631004">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="491" y="335" width="467" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.25.1440.875@0.25.1440.875" timestamp="1636122631004" />
+    <state x="449" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1636122604180">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="449" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1440.875@0.25.1440.875" timestamp="1636122604180" />
+    <state width="285" height="442" key="Diff.GoToChangePopup" timestamp="1636067462072">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="285" height="442" key="Diff.GoToChangePopup/0.25.1440.875@0.25.1440.875" timestamp="1636067462072" />
+    <state x="200" y="138" width="1240" height="675" key="DiffContextDialog" timestamp="1636068613198">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="200" y="138" width="1240" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1636068613198" />
+    <state x="580" y="191" key="EnvironmentVariablesDialog" timestamp="1636066693141">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="580" y="191" key="EnvironmentVariablesDialog/0.25.1440.875@0.25.1440.875" timestamp="1636066693141" />
+    <state x="474" y="369" key="GitRewordDialog" timestamp="1636067215269">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="474" y="369" key="GitRewordDialog/0.25.1440.875@0.25.1440.875" timestamp="1636067215269" />
+    <state width="1398" height="309" key="GridCell.Tab.0.bottom" timestamp="1636155453377">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="268" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1636064151776" />
-    <state width="1398" height="184" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1636058643972" />
-    <state width="1398" height="268" key="GridCell.Tab.0.center" timestamp="1636064151775">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="309" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1636155453377" />
+    <state width="1398" height="309" key="GridCell.Tab.0.center" timestamp="1636155453375">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="268" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1636064151775" />
-    <state width="1398" height="184" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1636058643972" />
-    <state width="1398" height="268" key="GridCell.Tab.0.left" timestamp="1636064151774">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="309" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1636155453375" />
+    <state width="1398" height="309" key="GridCell.Tab.0.left" timestamp="1636155453370">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="268" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1636064151774" />
-    <state width="1398" height="184" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1636058643971" />
-    <state width="1398" height="268" key="GridCell.Tab.0.right" timestamp="1636064151776">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="309" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1636155453370" />
+    <state width="1398" height="309" key="GridCell.Tab.0.right" timestamp="1636155453375">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="268" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1636064151776" />
-    <state width="1398" height="184" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1636058643972" />
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1636061774370">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="309" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1636155453375" />
+    <state width="1398" height="281" key="GridCell.Tab.1.bottom" timestamp="1636120019261">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1636061774370" />
-    <state width="1398" height="282" key="GridCell.Tab.1.bottom/0.25.1440.875@0.25.1440.875" timestamp="1636053476653" />
-    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1636061774368">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="281" key="GridCell.Tab.1.bottom/0.25.1440.875@0.25.1440.875" timestamp="1636120019261" />
+    <state width="1398" height="281" key="GridCell.Tab.1.center" timestamp="1636120019260">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1636061774368" />
-    <state width="1398" height="282" key="GridCell.Tab.1.center/0.25.1440.875@0.25.1440.875" timestamp="1636053476652" />
-    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1636061774368">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="281" key="GridCell.Tab.1.center/0.25.1440.875@0.25.1440.875" timestamp="1636120019260" />
+    <state width="1398" height="281" key="GridCell.Tab.1.left" timestamp="1636120019260">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1636061774368" />
-    <state width="1398" height="282" key="GridCell.Tab.1.left/0.25.1440.875@0.25.1440.875" timestamp="1636053476651" />
-    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1636061774369">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="281" key="GridCell.Tab.1.left/0.25.1440.875@0.25.1440.875" timestamp="1636120019260" />
+    <state width="1398" height="281" key="GridCell.Tab.1.right" timestamp="1636120019261">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1636061774369" />
-    <state width="1398" height="282" key="GridCell.Tab.1.right/0.25.1440.875@0.25.1440.875" timestamp="1636053476652" />
-    <state x="258" y="121" key="Maven.ArtifactSearchDialog" timestamp="1636042360615">
+    <state width="1398" height="281" key="GridCell.Tab.1.right/0.25.1440.875@0.25.1440.875" timestamp="1636120019261" />
+    <state x="258" y="121" key="Maven.ArtifactSearchDialog" timestamp="1636065245063">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="258" y="121" key="Maven.ArtifactSearchDialog/0.25.1440.875@0.25.1440.875" timestamp="1636042360615" />
-    <state x="208" y="41" key="SettingsEditor" timestamp="1636041264466">
+    <state x="258" y="121" key="Maven.ArtifactSearchDialog/0.25.1440.875@0.25.1440.875" timestamp="1636065245063" />
+    <state x="208" y="41" key="SettingsEditor" timestamp="1636119667677">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="208" y="41" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1636041264466" />
+    <state x="208" y="41" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1636119667677" />
+    <state x="572" y="381" key="VCS.ChangelistChooser" timestamp="1636067498310">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="572" y="381" key="VCS.ChangelistChooser/0.25.1440.875@0.25.1440.875" timestamp="1636067498310" />
     <state x="516" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1636052988964">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -237,10 +343,19 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="0" y="25" width="720" height="875" key="dock-window-1/0.25.1440.875@0.25.1440.875" timestamp="1636059196419" />
-    <state x="504" y="220" key="refactoring.ChangeSignatureDialog" timestamp="1636062710714">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="475" y="179" key="git4idea.branch.GitSmartOperationDialog" timestamp="1636067281264">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="475" y="179" key="git4idea.branch.GitSmartOperationDialog/0.25.1440.875@0.25.1440.875" timestamp="1636067281264" />
+    <state x="504" y="239" key="refactoring.ChangeSignatureDialog" timestamp="1636120080587">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="504" y="220" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1636062710714" />
+    <state x="504" y="239" key="refactoring.ChangeSignatureDialog/0.25.1440.875@0.25.1440.875" timestamp="1636120080587" />
+    <state x="385" y="210" width="670" height="675" key="run.anything.popup" timestamp="1636119652642">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="385" y="210" width="670" height="675" key="run.anything.popup/0.25.1440.875@0.25.1440.875" timestamp="1636119652642" />
     <state x="385" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1636042112340">
       <screen x="0" y="25" width="1440" height="875" />
     </state>

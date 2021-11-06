@@ -1,11 +1,12 @@
-package com.petProject.portfolio;
+package com.CoinPortfolio.portfolio;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class PortfolioApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DataApplication.class, args);
+        SpringApplication.run(PortfolioApplication.class, args);
     }
 }
