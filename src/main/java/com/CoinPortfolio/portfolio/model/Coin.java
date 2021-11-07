@@ -7,25 +7,72 @@ import java.util.HashMap;
 
 public class Coin {
 
-    private final String symbol;
-    // BidDecimal с актуальной котировкой
-    private BigDecimal actualPrice;
-    // Цена покупки
-    private final BigDecimal userBuyPrice;
-    // Количество монет
-    private final BigDecimal userCoinVolume;
-    // Начальная стоимость актива
-    private BigDecimal userInvestment;
-    // Последняя стоимость инвестиций. Сколько на данный момент стоимость актива.
-    private BigDecimal lastInvestmentCost;
-    private final CoinService service = new CoinService();
+    private CoinService service;
     private HashMap<String, BigDecimal> coinHashMap;
+    private String symbol;
+    private BigDecimal actualPrice;
+    private BigDecimal userBuyPrice;
+    private BigDecimal userCoinVolume;
+    private BigDecimal userInvestment;
+    private BigDecimal lastInvestmentCost;
+    private BigDecimal profitPercent;
+    private BigDecimal profit;
 
     public Coin(String symbol, BigDecimal userBuyPrice, BigDecimal userCoinVolume, HashMap<String, BigDecimal> coinHashMap) {
-        this.symbol = symbol;
-        this.userBuyPrice = userBuyPrice;
-        this.userCoinVolume = userCoinVolume;
+        setService(new CoinService());
         setCoinHashMap(coinHashMap);
+        setSymbol(symbol);
+        setUserBuyPrice(userBuyPrice);
+        setUserCoinVolume(userCoinVolume);
+        setActualPrice(getService().getActualCoinPriceBySymbol(getSymbol(), getCoinHashMap()));
+        setUserInvestment(getService().getUserInvestmentNumber(getUserCoinVolume(), getUserBuyPrice()));
+        setLastInvestmentCost(getService().getLastInvestmentCost(getUserCoinVolume(), getActualPrice()));
+        setProfit(getService().getProfitNumber(getLastInvestmentCost(), getUserInvestment()));
+        setProfitPercent(getService().getProfitPercent(getActualPrice(), getUserBuyPrice()));
+    }
+
+    public CoinService getService() {
+        return service;
+    }
+
+    public void setService(CoinService service) {
+        this.service = service;
+    }
+
+    public void setActualPrice(BigDecimal actualPrice) {
+        this.actualPrice = actualPrice;
+    }
+
+    public void setUserInvestment(BigDecimal userInvestment) {
+        this.userInvestment = userInvestment;
+    }
+
+    public void setLastInvestmentCost(BigDecimal lastInvestmentCost) {
+        this.lastInvestmentCost = lastInvestmentCost;
+    }
+
+    private void setUserCoinVolume(BigDecimal userCoinVolume) {
+        this.userCoinVolume = userCoinVolume;
+    }
+
+    private void setUserBuyPrice(BigDecimal userBuyPrice) {
+        this.userBuyPrice = userBuyPrice;
+    }
+
+    private void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public void setProfitPercent(BigDecimal profitPercent) {
+        this.profitPercent = profitPercent;
+    }
+
+    public void setProfit(BigDecimal profit) {
+        this.profit = profit;
+    }
+
+    public void setCoinHashMap(HashMap<String, BigDecimal> coinHashMap) {
+        this.coinHashMap = coinHashMap;
     }
 
     public String getSymbol() {
@@ -40,44 +87,40 @@ public class Coin {
         return userCoinVolume;
     }
 
-    public void setCoinHashMap(HashMap<String, BigDecimal> coinHashMap) {
-        this.coinHashMap = coinHashMap;
-    }
-
     public BigDecimal getActualPrice() {
-        actualPrice = service.getActualCoinPriceBySymbol(symbol, coinHashMap);
         return actualPrice;
     }
 
     public BigDecimal getUserInvestment() {
-        userInvestment = service.getUserInvestmentNumber(userCoinVolume, userBuyPrice);
         return userInvestment;
     }
 
     public BigDecimal getLastInvestmentCost() {
-        lastInvestmentCost = service.getLastInvestmentCost(userCoinVolume, actualPrice);
         return lastInvestmentCost;
     }
 
     public BigDecimal getProfit() {
-        // Прибыль
-        return service.getProfitNumber(lastInvestmentCost, userInvestment);
+        return profit;
     }
 
     public BigDecimal getProfitPercent() {
-        // На сколько процентов изменился профит
-        return service.getProfitPercent(actualPrice, userBuyPrice);
+        return profitPercent;
     }
 
-    public void getCoinInfo (){
-        System.out.println("Монета: " + getSymbol());
-        System.out.println("Инвестиция: " + getUserInvestment());
-        System.out.println("Цена покупки: " + getUserBuyPrice());
-        System.out.println("Актуальная стоимость: " + getActualPrice());
-        System.out.println("Колическтво монет: " + getUserCoinVolume());
-        System.out.println("Актуальная стоимость актива: " + getLastInvestmentCost());
-        System.out.println("Процент профита: " + getProfitPercent());
-        System.out.println("Чистая прибыль: " + getProfit());
-        System.out.println("_____________________");
+    public HashMap<String, BigDecimal> getCoinHashMap() {
+        return coinHashMap;
+    }
+
+    @Override
+    public String toString() {
+        return "\nМонета: " + getSymbol() + '\n' +
+                "Инвестиция: " + getUserInvestment() + '\n' +
+                "Цена покупки: " + getUserBuyPrice() + '\n' +
+                "Актуальная стоимость: " + getActualPrice() + '\n' +
+                "Колическтво монет: " + getUserCoinVolume() + '\n' +
+                "Актуальная стоимость актива: " + getLastInvestmentCost() + '\n' +
+                "Процент профита: " + getProfitPercent() + '\n' +
+                "Чистая прибыль: " + getProfit() + '\n' +
+                "_____________________";
     }
 }

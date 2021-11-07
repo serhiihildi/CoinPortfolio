@@ -5,12 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CoinService {
-    private HashMap<String, BigDecimal> coinHashMap;
-
-    public HashMap<String, BigDecimal> getCoinHashMap() {
-        coinHashMap = getCoinMap();
-        return coinHashMap;
-    }
 
     public BigDecimal getProfitPercent(BigDecimal actualPrice, BigDecimal userBuyPrice) {
             return ((actualPrice.subtract(userBuyPrice))
@@ -38,10 +32,5 @@ public class CoinService {
             }
         }
         return value;
-    }
-
-    private HashMap<String, BigDecimal> getCoinMap() {
-        coinHashMap = new GetCurrentCoinPrice().getCoinHashMap();
-        return coinHashMap;
     }
 }

@@ -1,26 +1,53 @@
 package com.CoinPortfolio.portfolio.model;
 
-import com.CoinPortfolio.portfolio.service.PortfolioService;
+import com.CoinPortfolio.portfolio.service.UserService;
 
-import java.util.Objects;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class User {
 
+    private UserService service;
+    private Portfolio portfolio;
+    private ArrayList<Portfolio> userPortfolioList;
     private String name;
     private String password;
-    private PortfolioService userPortfolio;
+    private BigDecimal userProfit;
+    private Price price;
+    private HashMap<String, BigDecimal> priceMap;
 
     public User() {
+        setName("Новый юзер");
+        setService(new UserService());
+        setPortfolio(new Portfolio());
+        setUserPortfolioList(new ArrayList<>());
     }
 
-    public User(String name, String password) {
-        this.name = name;
-        this.password = password;
+    public void setUserProfit(BigDecimal userProfit) {
+        this.userProfit = userProfit;
     }
 
-    public User(String name) {
-        this.name = name;
+    public BigDecimal getUserProfit() {
+        return userProfit;
     }
+
+    public void takeUserProfit() throws Exception {
+        BigDecimal userProfitSum = getService().getUserProfitSum(getUserPortfolioList());
+        setUserProfit(userProfitSum);
+        System.out.printf("Общая прибыль пользователя: $%s\n", getUserProfit());
+    }
+
+    public Portfolio createNewUserPortfolio(String name) throws Exception {
+        if (name.isEmpty()) {
+            throw new Exception("Name field is empty.");
+        }
+        if (service == null) {
+            service = new UserService();
+        }
+        return service.createNewUserPortfolio(name);
+    }
+
 
     public String getName() {
         return name;
@@ -38,25 +65,27 @@ public class User {
         this.password = password;
     }
 
-    public PortfolioService getUserPortfolio() {
-        return userPortfolio;
+    public Portfolio getPortfolio() {
+        return portfolio;
     }
 
-    public void setUserPortfolio(PortfolioService userPortfolio) {
-        this.userPortfolio = userPortfolio;
+    public void setPortfolio(Portfolio portfolio) {
+        this.portfolio = portfolio;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User userDAO = (User) o;
-        return Objects.equals(name, userDAO.name) &&
-                Objects.equals(password, userDAO.password);
+    public UserService getService() {
+        return service;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, password);
+    public void setService(UserService service) {
+        this.service = service;
+    }
+
+    public ArrayList<Portfolio> getUserPortfolioList() {
+        return userPortfolioList;
+    }
+
+    public void setUserPortfolioList(ArrayList<Portfolio> userPortfolioList) {
+        this.userPortfolioList = userPortfolioList;
     }
 }

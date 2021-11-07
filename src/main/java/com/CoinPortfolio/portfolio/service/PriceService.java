@@ -17,23 +17,26 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.HashMap;
 
-public class GetCurrentCoinPrice {
+public class PriceService {
 
     public static final String URL = "https://www.binance.com/api/v3/ticker/price";
 
-    public HashMap<String, BigDecimal> getCoinHashMap() {
-        return getMapWithCurrentCoinPriceJackson(getJsonWithCurrentPriceFromBinance());
-//        return getMapWithCurrentCoinPriceJackson(getUnparsedListCurrentCoinPrice());
+    public HashMap<String, BigDecimal> getAMapOfCurrentQuotes() {
+        return getAMapOfCurrentQuotesJackson(getJsonWithTheCurrentQuotesOfEheBinanceExchange());
     }
 
-//     Jackson
-    private HashMap<String, BigDecimal> getMapWithCurrentCoinPriceJackson(String coinList) {
+    /**
+     * Jackson
+     * @param coinList
+     * @return HashMap<String, BigDecimal>
+     * Метод парсит полученную строку содержащую актуальные котировками валютных пар биржы Binance
+     */
+    private HashMap<String, BigDecimal> getAMapOfCurrentQuotesJackson(String coinList) {
         HashMap<String, BigDecimal> coinHashMap = new HashMap<>();
         String symbol = null;
         BigDecimal price;
 
-        try {
-            JsonParser jsonParser = new JsonFactory().createParser(coinList);
+        try (JsonParser jsonParser = new JsonFactory().createParser(coinList)){
             while (jsonParser.nextToken() != JsonToken.END_ARRAY) {
                 while (jsonParser.nextToken() != JsonToken.END_OBJECT) {
                     String fieldName = jsonParser.getCurrentName();
@@ -54,8 +57,12 @@ public class GetCurrentCoinPrice {
         return coinHashMap;
     }
 
-//     Apache HttpClient
-    private String getJsonWithCurrentPriceFromBinance() {
+    /**
+     * Apache HttpClient
+     * @return String
+     * Получение актуальных котировок валютных пар от биржы Binance
+     */
+    private String getJsonWithTheCurrentQuotesOfEheBinanceExchange() {
         String responseBody = null;
         try (final CloseableHttpClient httpclient = HttpClients.createDefault()) {
             final HttpGet httpget = new HttpGet(URL);
@@ -79,54 +86,6 @@ public class GetCurrentCoinPrice {
         }
         return responseBody;
     }
-
-    // JSONParser
-//    private HashMap<String, BigDecimal> getMapWithCurrentCoinsPrice(String coinList) {
-//        HashMap<String, BigDecimal> coinHashMap = new HashMap<>();
-//        JSONParser parser = new JSONParser();
-//
-//        try {
-//            JSONArray a = (JSONArray) parser.parse(coinList);
-//
-//            for (Object o : a) {
-//                JSONObject coin = (JSONObject) o;
-//
-//                String symbol = (String) coin.get("symbol");
-//                BigDecimal price = new BigDecimal((String) coin.get("price"));
-//                coinHashMap.put(symbol, price);
-//            }
-//        } catch (ParseException e) {
-//            e.printStackTrace();
-//        }
-//        return coinHashMap;
-//    }
-
-    // HttpURLConnection
-//    private String getUnparsedListCurrentCoinPrice() {
-//
-//        HttpURLConnection connection;
-//        BufferedReader br = null;
-//        String coinList = null;
-//
-//        try {
-//            connection = (HttpURLConnection) new URL(URL).openConnection();
-//            if (connection != null) {
-//                connection.setRequestMethod("GET");
-//                connection.setConnectTimeout(200);
-//                connection.setReadTimeout(4000);
-//                connection.connect();
-//                if (HttpURLConnection.HTTP_OK == connection.getResponseCode()) {
-//                    InputStreamReader isr = new InputStreamReader(connection.getInputStream());
-//                    br = new BufferedReader(isr);
-//                }
-//                coinList = br != null ? br.readLine() : null;
-//            }
-//        } catch (IOException e) {
-//            //TODO Realise Exception message;
-//            e.printStackTrace();
-//        }
-//        return coinList;
-//    }
 }
 
 
