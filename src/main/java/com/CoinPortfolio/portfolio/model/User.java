@@ -4,7 +4,6 @@ import com.CoinPortfolio.portfolio.service.UserService;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class User {
 
@@ -14,8 +13,6 @@ public class User {
     private String name;
     private String password;
     private BigDecimal userProfit;
-    private Price price;
-    private HashMap<String, BigDecimal> priceMap;
 
     public User() {
         setName("Новый юзер");

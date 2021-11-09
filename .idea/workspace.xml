@@ -27,20 +27,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f92a16-7932-4b0c-bab5-6323838a04f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/TestStart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Price.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/UserCoin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/TestStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/TestStart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Coin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/CoinList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Portfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Price.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Price.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/CoinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/CoinService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/GetCurrentCoinPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/PriceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/PortfolioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/PortfolioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/TakeCoinInfoFromUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/view/CoinView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/сontrollers/CoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/сontrollers/CoinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/PriceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/PriceService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +89,7 @@
       <module name="portfolio" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.CoinPortfolio.portfolio.model.*" />
+          <option name="PATTERN" value="com.CoinPortfolio.portfolio.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,8 +110,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PortfolioService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.portfolio.service.PortfolioService" />
+    <configuration name="PriceService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.portfolio.service.PriceService" />
       <module name="portfolio" />
       <extension name="coverage">
         <pattern>
@@ -175,19 +173,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.CoinService" />
-      <item itemvalue="Application.PortfolioService" />
       <item itemvalue="Application.Portfolio" />
       <item itemvalue="Application.User" />
       <item itemvalue="Application.TestStart" />
+      <item itemvalue="Application.PriceService" />
+      <item itemvalue="Application.CoinService" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.TestStart" />
+        <item itemvalue="Application.CoinService" />
+        <item itemvalue="Application.PriceService" />
         <item itemvalue="Application.User" />
         <item itemvalue="Application.Portfolio" />
-        <item itemvalue="Application.PortfolioService" />
-        <item itemvalue="Application.CoinService" />
       </list>
     </recent_temporary>
   </component>
@@ -278,19 +276,19 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="507" y="171" key="#com.intellij.ide.macro.MacrosDialog/0.25.1440.875@0.25.1440.875" timestamp="1636066828834" />
-    <state x="533" y="182" key="#com.intellij.ide.util.MemberChooser" timestamp="1636310656484">
+    <state x="533" y="182" key="#com.intellij.ide.util.MemberChooser" timestamp="1636476061520">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="533" y="161" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1636061042111" />
-    <state x="533" y="182" key="#com.intellij.ide.util.MemberChooser/0.25.1440.875@0.25.1440.875" timestamp="1636310656484" />
+    <state x="533" y="182" key="#com.intellij.ide.util.MemberChooser/0.25.1440.875@0.25.1440.875" timestamp="1636476061520" />
     <state x="491" y="335" width="467" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1636122631004">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="491" y="335" width="467" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.25.1440.875@0.25.1440.875" timestamp="1636122631004" />
-    <state x="449" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1636310432097">
+    <state x="410" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1636469384302">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="449" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1440.875@0.25.1440.875" timestamp="1636310432097" />
+    <state x="410" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1440.875@0.25.1440.875" timestamp="1636469384302" />
     <state x="458" y="213" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1636213054213">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -299,10 +297,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="285" height="442" key="Diff.GoToChangePopup/0.25.1440.875@0.25.1440.875" timestamp="1636067462072" />
-    <state x="200" y="138" width="1240" height="675" key="DiffContextDialog" timestamp="1636068613198">
+    <state x="200" y="138" width="1240" height="675" key="DiffContextDialog" timestamp="1636479359639">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="200" y="138" width="1240" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1636068613198" />
+    <state x="200" y="138" width="1240" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1636479359639" />
     <state x="580" y="191" key="EnvironmentVariablesDialog" timestamp="1636066693141">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -311,50 +309,50 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="474" y="369" key="GitRewordDialog/0.25.1440.875@0.25.1440.875" timestamp="1636067215269" />
-    <state width="1398" height="309" key="GridCell.Tab.0.bottom" timestamp="1636327328445">
+    <state width="1398" height="309" key="GridCell.Tab.0.bottom" timestamp="1636485556049">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="268" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1636064151776" />
-    <state width="1398" height="309" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1636327328445" />
-    <state width="1398" height="309" key="GridCell.Tab.0.center" timestamp="1636327328444">
+    <state width="1398" height="309" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1636485556049" />
+    <state width="1398" height="309" key="GridCell.Tab.0.center" timestamp="1636485556048">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="268" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1636064151775" />
-    <state width="1398" height="309" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1636327328444" />
-    <state width="1398" height="309" key="GridCell.Tab.0.left" timestamp="1636327328444">
+    <state width="1398" height="309" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1636485556048" />
+    <state width="1398" height="309" key="GridCell.Tab.0.left" timestamp="1636485556047">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="268" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1636064151774" />
-    <state width="1398" height="309" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1636327328444" />
-    <state width="1398" height="309" key="GridCell.Tab.0.right" timestamp="1636327328445">
+    <state width="1398" height="309" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1636485556047" />
+    <state width="1398" height="309" key="GridCell.Tab.0.right" timestamp="1636485556048">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="268" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1636064151776" />
-    <state width="1398" height="309" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1636327328445" />
-    <state width="1398" height="281" key="GridCell.Tab.1.bottom" timestamp="1636312787337">
+    <state width="1398" height="309" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1636485556048" />
+    <state width="1398" height="281" key="GridCell.Tab.1.bottom" timestamp="1636484215845">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1636061774370" />
-    <state width="1398" height="281" key="GridCell.Tab.1.bottom/0.25.1440.875@0.25.1440.875" timestamp="1636312787337" />
-    <state width="1398" height="281" key="GridCell.Tab.1.center" timestamp="1636312787336">
+    <state width="1398" height="281" key="GridCell.Tab.1.bottom/0.25.1440.875@0.25.1440.875" timestamp="1636484215845" />
+    <state width="1398" height="281" key="GridCell.Tab.1.center" timestamp="1636484215844">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1636061774368" />
-    <state width="1398" height="281" key="GridCell.Tab.1.center/0.25.1440.875@0.25.1440.875" timestamp="1636312787336" />
-    <state width="1398" height="281" key="GridCell.Tab.1.left" timestamp="1636312787335">
+    <state width="1398" height="281" key="GridCell.Tab.1.center/0.25.1440.875@0.25.1440.875" timestamp="1636484215844" />
+    <state width="1398" height="281" key="GridCell.Tab.1.left" timestamp="1636484215842">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1636061774368" />
-    <state width="1398" height="281" key="GridCell.Tab.1.left/0.25.1440.875@0.25.1440.875" timestamp="1636312787335" />
-    <state width="1398" height="281" key="GridCell.Tab.1.right" timestamp="1636312787336">
+    <state width="1398" height="281" key="GridCell.Tab.1.left/0.25.1440.875@0.25.1440.875" timestamp="1636484215842" />
+    <state width="1398" height="281" key="GridCell.Tab.1.right" timestamp="1636484215844">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1636061774369" />
-    <state width="1398" height="281" key="GridCell.Tab.1.right/0.25.1440.875@0.25.1440.875" timestamp="1636312787336" />
-    <state x="258" y="121" key="Maven.ArtifactSearchDialog" timestamp="1636065245063">
+    <state width="1398" height="281" key="GridCell.Tab.1.right/0.25.1440.875@0.25.1440.875" timestamp="1636484215844" />
+    <state x="258" y="121" key="Maven.ArtifactSearchDialog" timestamp="1636460345810">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="258" y="121" key="Maven.ArtifactSearchDialog/0.25.1440.875@0.25.1440.875" timestamp="1636065245063" />
+    <state x="258" y="121" key="Maven.ArtifactSearchDialog/0.25.1440.875@0.25.1440.875" timestamp="1636460345810" />
     <state x="507" y="339" key="RefactorJ.RemoveMiddleman" timestamp="1636210856234">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -367,10 +365,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="572" y="381" key="VCS.ChangelistChooser/0.25.1440.875@0.25.1440.875" timestamp="1636067498310" />
-    <state x="516" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1636310984010">
+    <state x="516" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1636485172625">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="516" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.875@0.25.1440.875" timestamp="1636310984010" />
+    <state x="516" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.875@0.25.1440.875" timestamp="1636485172625" />
     <state x="158" y="195" width="1123" height="586" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1636307643156">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -383,6 +381,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="458" y="204" key="extract.method.dialog/0.25.1440.875@0.25.1440.875" timestamp="1636306394303" />
+    <state x="419" y="217" width="602" height="490" key="find.popup" timestamp="1636459719772">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="419" y="217" width="602" height="490" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1636459719772" />
     <state x="475" y="179" key="git4idea.branch.GitSmartOperationDialog" timestamp="1636067281264">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -396,37 +398,21 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="385" y="210" width="670" height="675" key="run.anything.popup/0.25.1440.875@0.25.1440.875" timestamp="1636119652642" />
-    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1636308019660">
+    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1636478719116">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1636308019660" />
+    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1636478719116" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/PortfolioService.java</url>
-          <line>19</line>
+          <line>20</line>
           <properties class="com.CoinPortfolio.portfolio.service.PortfolioService" method="getProfileProfit">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Portfolio.java</url>
-          <line>21</line>
-          <properties class="com.CoinPortfolio.portfolio.model.Portfolio" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/User.java</url>
-          <line>19</line>
-          <properties class="com.CoinPortfolio.portfolio.model.User" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

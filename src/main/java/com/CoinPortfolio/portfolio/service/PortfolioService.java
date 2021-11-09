@@ -1,12 +1,13 @@
 package com.CoinPortfolio.portfolio.service;
 
 import com.CoinPortfolio.portfolio.model.Coin;
+import com.CoinPortfolio.portfolio.model.UserCoin;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Map;
 
 public class PortfolioService {
 
@@ -17,10 +18,10 @@ public class PortfolioService {
      * @throws Exception
      * Логика, позволяющая пользователю получить общую прибыль по портфелю
      */
-    public BigDecimal getProfileProfit(ArrayList<Coin> coinArrayList) throws Exception {
+    public BigDecimal getProfileProfit(ArrayList<UserCoin> coinArrayList) throws Exception {
         BigDecimal profitSum = BigDecimal.ZERO;
         if (!coinArrayList.isEmpty()) {
-            for (Coin value : coinArrayList) {
+            for (UserCoin value : coinArrayList) {
                 BigDecimal profit = value.getProfit();
                 profitSum = profit.add(profitSum).plus(new MathContext(4, RoundingMode.HALF_UP));
             }
@@ -35,10 +36,10 @@ public class PortfolioService {
      * @throws Exception
      * Логика, позволяющая пользователю получить значение начальных инвестиций в портфель
      */
-    public BigDecimal getUserInvestmentNumber(ArrayList<Coin> coinArrayList) throws Exception {
+    public BigDecimal getUserInvestmentNumber(ArrayList<UserCoin> coinArrayList) throws Exception {
         BigDecimal userInvestmentSum = BigDecimal.ZERO;
         if (!coinArrayList.isEmpty()) {
-            for (Coin value : coinArrayList) {
+            for (UserCoin value : coinArrayList) {
                 BigDecimal userInvestment = value.getUserInvestment();
                 userInvestmentSum = userInvestment.add(userInvestmentSum).plus(new MathContext(4, RoundingMode.HALF_UP));
             }
@@ -53,10 +54,10 @@ public class PortfolioService {
      * @throws Exception
      * Логика, позволяющая пользователю получить актуальную стоимость портфеля
      */
-    public BigDecimal getCurrentUserPortfolioInvestmentNumber(ArrayList<Coin> coinArrayList) throws Exception {
+    public BigDecimal getCurrentUserPortfolioInvestmentNumber(ArrayList<UserCoin> coinArrayList) throws Exception {
         BigDecimal sumOfLastInvestmentCost = BigDecimal.ZERO;
         if (!coinArrayList.isEmpty()) {
-            for (Coin value : coinArrayList) {
+            for (UserCoin value : coinArrayList) {
                 BigDecimal lastInvestmentCost = value.getLastInvestmentCost();
                 sumOfLastInvestmentCost = lastInvestmentCost
                         .add(sumOfLastInvestmentCost)
@@ -71,28 +72,21 @@ public class PortfolioService {
      * @param userPortfolio
      * Печатает все Coin содержадиеся в коллекции
      */
-    public void getAllCoinWhichAreContainedAtList(ArrayList<Coin> userPortfolio) {
-        for (Coin coin : userPortfolio) {
+    public void getAllCoinWhichAreContainedAtList(ArrayList<UserCoin> userPortfolio) {
+        for (UserCoin coin : userPortfolio) {
             System.out.println(coin.toString());
         }
     }
 
-    public void getProfitOnEveryCoin(ArrayList<Coin> userPortfolio) {
-        System.out.println("Прибыль по монетам:");
-        for (Coin coin : userPortfolio) {
-//            coin.toStringCoinProfit();
-        }
-    }
-
-    public Coin addCoinToCustomPortfolio(String symbol,
-                                         BigDecimal userByuPrice,
-                                         BigDecimal userCoinVolume,
-                                         HashMap<String, BigDecimal> coinHashMap) {
-        return new Coin(
+    public UserCoin addCoinToCustomPortfolio(String symbol,
+                                             BigDecimal userByuPrice,
+                                             BigDecimal userCoinVolume,
+                                             Map<String, Coin> coinMap) {
+        return new UserCoin(
                 symbol,
                 userByuPrice,
                 userCoinVolume,
-                coinHashMap
+                coinMap
         );
     }
 }

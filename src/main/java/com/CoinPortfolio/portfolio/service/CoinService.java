@@ -1,8 +1,10 @@
 package com.CoinPortfolio.portfolio.service;
 
+import com.CoinPortfolio.portfolio.model.Coin;
+
 import java.math.BigDecimal;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class CoinService {
 
@@ -24,13 +26,12 @@ public class CoinService {
         return userBuyPrice.multiply(userCoinVolume);
     }
 
-    public BigDecimal getActualCoinPriceBySymbol(String symbol, HashMap<String, BigDecimal> coinHashMap) {
-        BigDecimal value = null;
-        for (Map.Entry<String, BigDecimal> entry : coinHashMap.entrySet()) {
-            if (entry.getKey().equals(symbol)) {
-                value = entry.getValue();
-            }
-        }
-        return value;
+    public BigDecimal getActualCoinPriceBySymbol(String symbol, Map<String, Coin> coinHashMap) {
+        return Objects.requireNonNull(coinHashMap.entrySet().stream()
+                .filter(x -> symbol.equals(x.getKey()))
+                .findFirst()
+                .orElse(null))
+                .getValue()
+                .getPrice();
     }
 }

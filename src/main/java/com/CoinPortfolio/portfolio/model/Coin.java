@@ -1,126 +1,48 @@
 package com.CoinPortfolio.portfolio.model;
 
-import com.CoinPortfolio.portfolio.service.CoinService;
-
 import java.math.BigDecimal;
-import java.util.HashMap;
+import java.util.Objects;
 
 public class Coin {
 
-    private CoinService service;
-    private HashMap<String, BigDecimal> coinHashMap;
     private String symbol;
-    private BigDecimal actualPrice;
-    private BigDecimal userBuyPrice;
-    private BigDecimal userCoinVolume;
-    private BigDecimal userInvestment;
-    private BigDecimal lastInvestmentCost;
-    private BigDecimal profitPercent;
-    private BigDecimal profit;
+    private BigDecimal price;
 
-    public Coin(String symbol, BigDecimal userBuyPrice, BigDecimal userCoinVolume, HashMap<String, BigDecimal> coinHashMap) {
-        setService(new CoinService());
-        setCoinHashMap(coinHashMap);
-        setSymbol(symbol);
-        setUserBuyPrice(userBuyPrice);
-        setUserCoinVolume(userCoinVolume);
-        setActualPrice(getService().getActualCoinPriceBySymbol(getSymbol(), getCoinHashMap()));
-        setUserInvestment(getService().getUserInvestmentNumber(getUserCoinVolume(), getUserBuyPrice()));
-        setLastInvestmentCost(getService().getLastInvestmentCost(getUserCoinVolume(), getActualPrice()));
-        setProfit(getService().getProfitNumber(getLastInvestmentCost(), getUserInvestment()));
-        setProfitPercent(getService().getProfitPercent(getActualPrice(), getUserBuyPrice()));
-    }
-
-    public CoinService getService() {
-        return service;
-    }
-
-    public void setService(CoinService service) {
-        this.service = service;
-    }
-
-    public void setActualPrice(BigDecimal actualPrice) {
-        this.actualPrice = actualPrice;
-    }
-
-    public void setUserInvestment(BigDecimal userInvestment) {
-        this.userInvestment = userInvestment;
-    }
-
-    public void setLastInvestmentCost(BigDecimal lastInvestmentCost) {
-        this.lastInvestmentCost = lastInvestmentCost;
-    }
-
-    private void setUserCoinVolume(BigDecimal userCoinVolume) {
-        this.userCoinVolume = userCoinVolume;
-    }
-
-    private void setUserBuyPrice(BigDecimal userBuyPrice) {
-        this.userBuyPrice = userBuyPrice;
-    }
-
-    private void setSymbol(String symbol) {
-        this.symbol = symbol;
-    }
-
-    public void setProfitPercent(BigDecimal profitPercent) {
-        this.profitPercent = profitPercent;
-    }
-
-    public void setProfit(BigDecimal profit) {
-        this.profit = profit;
-    }
-
-    public void setCoinHashMap(HashMap<String, BigDecimal> coinHashMap) {
-        this.coinHashMap = coinHashMap;
+    public Coin() {
     }
 
     public String getSymbol() {
         return symbol;
     }
 
-    public BigDecimal getUserBuyPrice() {
-        return userBuyPrice;
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
     }
 
-    public BigDecimal getUserCoinVolume() {
-        return userCoinVolume;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public BigDecimal getActualPrice() {
-        return actualPrice;
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
-    public BigDecimal getUserInvestment() {
-        return userInvestment;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Coin testPrice = (Coin) o;
+        return Objects.equals(symbol, testPrice.symbol) &&
+                Objects.equals(price, testPrice.price);
     }
 
-    public BigDecimal getLastInvestmentCost() {
-        return lastInvestmentCost;
-    }
-
-    public BigDecimal getProfit() {
-        return profit;
-    }
-
-    public BigDecimal getProfitPercent() {
-        return profitPercent;
-    }
-
-    public HashMap<String, BigDecimal> getCoinHashMap() {
-        return coinHashMap;
+    @Override
+    public int hashCode() {
+        return Objects.hash(symbol, price);
     }
 
     @Override
     public String toString() {
-        return "\nМонета: " + getSymbol() + '\n' +
-                "Инвестиция: " + getUserInvestment() + '\n' +
-                "Цена покупки: " + getUserBuyPrice() + '\n' +
-                "Актуальная стоимость: " + getActualPrice() + '\n' +
-                "Колическтво монет: " + getUserCoinVolume() + '\n' +
-                "Актуальная стоимость актива: " + getLastInvestmentCost() + '\n' +
-                "Процент профита: " + getProfitPercent() + '\n' +
-                "Чистая прибыль: " + getProfit() + '\n' +
-                "_____________________";
+        return symbol + ": " + price;
     }
 }

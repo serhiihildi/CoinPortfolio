@@ -4,13 +4,13 @@ import com.CoinPortfolio.portfolio.service.PortfolioService;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Map;
 
 public class Portfolio {
 
-    private HashMap<String, BigDecimal> priceMap;
+    private Map<String, Coin> priceMap;
     private PortfolioService portfolioService;
-    private ArrayList<Coin> userCoinList;
+    private ArrayList<UserCoin> userCoinList;
     private Price price;
     private User user;
 
@@ -22,7 +22,7 @@ public class Portfolio {
     public Portfolio() {
         if (getPriceMap() == null) {
             setPrice(new Price());
-            setPriceMap(getPrice().getPrice());
+            setPriceMap(getPrice().getPriceMap());
         }
         setUserCoinList(new ArrayList<>());
         setPortfolioService(new PortfolioService());
@@ -78,19 +78,19 @@ public class Portfolio {
         this.name = name;
     }
 
-    public ArrayList<Coin> getUserCoinList() {
+    public ArrayList<UserCoin> getUserCoinList() {
         return userCoinList;
     }
 
-    public void setUserCoinList(ArrayList<Coin> userCoinList) {
+    public void setUserCoinList(ArrayList<UserCoin> userCoinList) {
         this.userCoinList = userCoinList;
     }
 
-    public HashMap<String, BigDecimal> getPriceMap() {
+    public Map<String, Coin> getPriceMap() {
         return priceMap;
     }
 
-    public void setPriceMap(HashMap<String, BigDecimal> priceMap) {
+    public void setPriceMap(Map<String, Coin> priceMap) {
         this.priceMap = priceMap;
     }
 

@@ -2,24 +2,25 @@ package com.CoinPortfolio.portfolio.model;
 
 import com.CoinPortfolio.portfolio.service.PriceService;
 
-import java.math.BigDecimal;
-import java.util.HashMap;
+import java.util.Map;
 
 public class Price {
-    private HashMap<String, BigDecimal> price;
+    private Map<String, Coin> priceMap;
     private PriceService service;
+    private String symbol;
+    private String price;
 
     public Price() {
         setService(new PriceService());
-        setPrice(getService().getAMapOfCurrentQuotes());
+        setPriceMap(getService().getAMapOfCurrentQuotes());
     }
 
-    public HashMap<String, BigDecimal> getPrice() {
-        return price;
+    public Map<String, Coin> getPriceMap() {
+        return priceMap;
     }
 
-    private void setPrice(HashMap<String, BigDecimal> price) {
-        this.price = price;
+    public void setPriceMap(Map<String, Coin> priceMap) {
+        this.priceMap = priceMap;
     }
 
     private PriceService getService() {
@@ -28,5 +29,21 @@ public class Price {
 
     private void setService(PriceService service) {
         this.service = service;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 }

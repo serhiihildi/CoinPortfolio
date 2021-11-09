@@ -1,24 +1,48 @@
 package com.CoinPortfolio.portfolio;
 
-import com.CoinPortfolio.portfolio.model.Portfolio;
 import com.CoinPortfolio.portfolio.model.User;
 
 import java.math.BigDecimal;
 
 public class TestStart {
     private User user;
+    static int counter = 0;
+
     public static void main(String[] args) {
-        try {
-            new TestStart().start();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+//        TimerTask timerTask = new TimerTask() {
+//
+//            @Override
+//            public void run() {
+//                counter++;
+//            }
+//        };
+
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        new TestStart().start();
+
+//                        if (counter > 500) {
+//                            timer.cancel();
+//                            break;//end this loop
+//                        }
+                        Thread.sleep(60000);
+                    } catch (InterruptedException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+        });
+
+        t.start();
+
     }
 
-    private void start() throws Exception {
-
+    private void start() {
         user = new User();
-
         try {
             addFirstPortfolio();
             addSecondPortfolio();
@@ -27,10 +51,15 @@ public class TestStart {
             e.printStackTrace();
         }
 
-        for (Portfolio value : user.getUserPortfolioList()) {
-            value.getGlobalInfo();
+//        user.getUserPortfolioList().forEach(Portfolio::getGlobalInfo);
+
+        try {
+            user.takeUserProfit();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        user.takeUserProfit();
+//        user.getUserPortfolioList().forEach(System.out::println);
+
     }
 
     private void addSecondPortfolio() throws Exception {
