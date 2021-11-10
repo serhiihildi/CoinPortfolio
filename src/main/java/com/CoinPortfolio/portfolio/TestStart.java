@@ -1,22 +1,17 @@
 package com.CoinPortfolio.portfolio;
 
+import com.CoinPortfolio.portfolio.model.Portfolio;
 import com.CoinPortfolio.portfolio.model.User;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
 
 public class TestStart {
+    static final Logger logger = LogManager.getLogger(TestStart.class.getName());
     private User user;
-    static int counter = 0;
 
     public static void main(String[] args) {
-
-//        TimerTask timerTask = new TimerTask() {
-//
-//            @Override
-//            public void run() {
-//                counter++;
-//            }
-//        };
 
         Thread t = new Thread(new Runnable() {
             @Override
@@ -24,21 +19,14 @@ public class TestStart {
                 while (true) {
                     try {
                         new TestStart().start();
-
-//                        if (counter > 500) {
-//                            timer.cancel();
-//                            break;//end this loop
-//                        }
-                        Thread.sleep(60000);
+                        Thread.sleep(900000);
                     } catch (InterruptedException ex) {
-                        ex.printStackTrace();
+                        logger.error("Error creating a new thread and starting the test application. Class: " + getClass());
                     }
                 }
             }
         });
-
         t.start();
-
     }
 
     private void start() {
@@ -47,22 +35,19 @@ public class TestStart {
             addFirstPortfolio();
             addSecondPortfolio();
         } catch (Exception e) {
-            // TODO:
-            e.printStackTrace();
+            logger.error("Failed to create new user portfolio and add coins: " + e.getClass());
         }
 
-//        user.getUserPortfolioList().forEach(Portfolio::getGlobalInfo);
-
-        try {
-            user.takeUserProfit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        user.getUserPortfolioList().forEach(Portfolio::getGlobalInfo);
 //        user.getUserPortfolioList().forEach(System.out::println);
-
+        try {
+            user.takeTotalUserProfit();
+        } catch (Exception e) {
+            logger.error("Failed to get \"Total User Profit\": " + e.getClass());
+        }
     }
 
-    private void addSecondPortfolio() throws Exception {
+    private void addSecondPortfolio() {
         user.setPortfolio(user.createNewUserPortfolio("Okex"));
 
         user.getPortfolio().addCoinToPortfolio(
@@ -109,7 +94,6 @@ public class TestStart {
 
         user.setUserPortfolioList(user.getService().addNewUserPortfolioToList(user.getPortfolio()));
     }
-
     private void addFirstPortfolio() throws Exception {
         user.setPortfolio(user.createNewUserPortfolio("Binance"));
 

@@ -1,33 +1,33 @@
 package com.CoinPortfolio.portfolio.model;
 
-import com.CoinPortfolio.portfolio.service.PriceService;
+import com.CoinPortfolio.portfolio.service.QuotesService;
 
 import java.util.Map;
 
 public class Price {
-    private Map<String, Coin> priceMap;
-    private PriceService service;
+    private Map<String, Quotes> priceMap;
+    private QuotesService service;
     private String symbol;
     private String price;
 
     public Price() {
-        setService(new PriceService());
+        setService(new QuotesService());
         setPriceMap(getService().getAMapOfCurrentQuotes());
     }
 
-    public Map<String, Coin> getPriceMap() {
+    public Map<String, Quotes> getPriceMap() {
         return priceMap;
     }
 
-    public void setPriceMap(Map<String, Coin> priceMap) {
+    public void setPriceMap(Map<String, Quotes> priceMap) {
         this.priceMap = priceMap;
     }
 
-    private PriceService getService() {
+    private QuotesService getService() {
         return service;
     }
 
-    private void setService(PriceService service) {
+    private void setService(QuotesService service) {
         this.service = service;
     }
 

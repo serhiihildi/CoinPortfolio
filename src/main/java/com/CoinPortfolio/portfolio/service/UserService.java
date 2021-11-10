@@ -1,20 +1,23 @@
 package com.CoinPortfolio.portfolio.service;
 
+import com.CoinPortfolio.portfolio.impl.UserServiceImpl;
 import com.CoinPortfolio.portfolio.model.Portfolio;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-public class UserService {
+public class UserService implements UserServiceImpl {
 
     private ArrayList<Portfolio> userPortfolioList;
 
-    public Portfolio createNewUserPortfolio(String name) throws Exception {
+    @Override
+    public Portfolio createNewUserPortfolio(String name) {
         Portfolio portfolio = new Portfolio();
         portfolio.setName(name);
         return portfolio;
     }
 
+    @Override
     public ArrayList<Portfolio> addNewUserPortfolioToList(Portfolio portfolio) {
         if (userPortfolioList == null) {
             userPortfolioList = new ArrayList<>();
@@ -23,7 +26,8 @@ public class UserService {
         return userPortfolioList;
     }
 
-    public BigDecimal getUserProfitSum(ArrayList<Portfolio> userPortfolio) throws Exception {
+    @Override
+    public BigDecimal getUserProfitSum(ArrayList<Portfolio> userPortfolio)  {
         BigDecimal profileProfitNumber = BigDecimal.ZERO;
         for (Portfolio value : userPortfolio) {
             value.setGlobalInfo();

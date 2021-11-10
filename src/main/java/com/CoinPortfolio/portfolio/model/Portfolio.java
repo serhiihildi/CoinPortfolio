@@ -1,14 +1,19 @@
 package com.CoinPortfolio.portfolio.model;
 
 import com.CoinPortfolio.portfolio.service.PortfolioService;
+import lombok.Data;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Map;
 
+@Data
 public class Portfolio {
+    static final Logger logger = LogManager.getLogger(Portfolio.class.getName());
 
-    private Map<String, Coin> priceMap;
+    private Map<String, Quotes> priceMap;
     private PortfolioService portfolioService;
     private ArrayList<UserCoin> userCoinList;
     private Price price;
@@ -39,7 +44,7 @@ public class Portfolio {
         setUserCoinList(getUserCoinList());
     }
 
-    public void setGlobalInfo() throws Exception {
+    public void setGlobalInfo() {
         setUserInvestmentNumber(getPortfolioService().getUserInvestmentNumber(getUserCoinList()));
         setCurrentUserPortfolioInvestmentNumber(getPortfolioService().getCurrentUserPortfolioInvestmentNumber(getUserCoinList()));
         setProfileProfitNumber(getPortfolioService().getProfileProfit(getUserCoinList()));
@@ -49,89 +54,12 @@ public class Portfolio {
         try {
             setGlobalInfo();
         } catch (Exception e) {
-            // TODO:
-            e.printStackTrace();
+            logger.error("Failed to get full portfolio information. Method error: " + e.getClass());
         }
-        System.out.printf("Начальная цена портфеля: $%s\n" +
-                        "Актуальная стоимость портфеля: $%s\n" +
-                        "Прибыль: $%s\n",
-                getUserInvestmentNumber(),
-                getCurrentUserPortfolioInvestmentNumber(),
-                getProfileProfitNumber()
-        );
-        System.out.println("____________________");
-    }
-
-    public PortfolioService getPortfolioService() {
-        return portfolioService;
-    }
-
-    public void setPortfolioService(PortfolioService portfolioService) {
-        this.portfolioService = portfolioService;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public ArrayList<UserCoin> getUserCoinList() {
-        return userCoinList;
-    }
-
-    public void setUserCoinList(ArrayList<UserCoin> userCoinList) {
-        this.userCoinList = userCoinList;
-    }
-
-    public Map<String, Coin> getPriceMap() {
-        return priceMap;
-    }
-
-    public void setPriceMap(Map<String, Coin> priceMap) {
-        this.priceMap = priceMap;
-    }
-
-    public BigDecimal getUserInvestmentNumber() {
-        return userInvestmentNumber;
-    }
-
-    public void setUserInvestmentNumber(BigDecimal userInvestmentNumber) {
-        this.userInvestmentNumber = userInvestmentNumber;
-    }
-
-    public BigDecimal getProfileProfitNumber() {
-        return profileProfitNumber;
-    }
-
-    public void setProfileProfitNumber(BigDecimal profileProfitNumber) {
-        this.profileProfitNumber = profileProfitNumber;
-    }
-
-    public BigDecimal getCurrentUserPortfolioInvestmentNumber() {
-        return currentUserPortfolioInvestmentNumber;
-    }
-
-    public void setCurrentUserPortfolioInvestmentNumber(BigDecimal currentUserPortfolioInvestmentNumber) {
-        this.currentUserPortfolioInvestmentNumber = currentUserPortfolioInvestmentNumber;
-    }
-
-    public Price getPrice() {
-        return price;
-    }
-
-    public void setPrice(Price price) {
-        this.price = price;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
+        logger.info("Начальная цена портфеля: $" + getUserInvestmentNumber());
+        logger.info("Актуальная стоимость портфеля: $" + getCurrentUserPortfolioInvestmentNumber());
+        logger.info("Прибыль: $" + getProfileProfitNumber());
+        logger.info("____________________");
     }
 
     @Override
