@@ -26,14 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3f92a16-7932-4b0c-bab5-6323838a04f2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/TestStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/TestStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Portfolio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/CoinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/CoinService.java" afterDir="false" />
-    </list>
+    <list default="true" id="b3f92a16-7932-4b0c-bab5-6323838a04f2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
