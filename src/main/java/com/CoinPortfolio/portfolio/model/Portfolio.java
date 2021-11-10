@@ -54,17 +54,11 @@ public class Portfolio {
         try {
             setGlobalInfo();
         } catch (Exception e) {
-            logger.error("Failed to get full portfolio information. Method error: " + e.getClass());
+            logger.error("Failed to get full portfolio information. Method error");
         }
+        logger.info("[" + getName() + "]");
         logger.info("Начальная цена портфеля: $" + getUserInvestmentNumber());
         logger.info("Актуальная стоимость портфеля: $" + getCurrentUserPortfolioInvestmentNumber());
         logger.info("Прибыль: $" + getProfileProfitNumber());
-        logger.info("____________________");
     }
-
-    @Override
-    public String toString() {
-        return "Биржа: " + getName() + "\n" + userCoinList;
-    }
-
 }

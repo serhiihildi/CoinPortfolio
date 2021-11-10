@@ -27,25 +27,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f92a16-7932-4b0c-bab5-6323838a04f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/impl/PortfolioServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/impl/PriceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CoinPortfolio.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/ServletInitializer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/TestStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/TestStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Coin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/Portfolio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/UserCoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/model/UserCoin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/CoinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/CoinService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/PortfolioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/PortfolioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/PriceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/PriceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CoinPortfolio/portfolio/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +53,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
   <component name="ProjectId" id="20SXkhpnNw3Kz2Vp6f6Di6krS54" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -80,7 +70,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -96,13 +86,13 @@
       <recent name="$PROJECT_DIR$/.idea/libraries" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestStart">
+  <component name="RunManager" selected="Application.TestStart (1)">
     <configuration name="CoinService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.portfolio.service.CoinService" />
+      <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.CoinService" />
       <module name="portfolio" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.CoinPortfolio.portfolio.impl.*" />
+          <option name="PATTERN" value="com.CoinPortfolio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,11 +101,11 @@
       </method>
     </configuration>
     <configuration name="PortfolioApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.portfolio.PortfolioApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.PortfolioApplication" />
       <module name="portfolio" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.CoinPortfolio.portfolio.*" />
+          <option name="PATTERN" value="com.CoinPortfolio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,12 +113,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PriceService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.portfolio.service.PriceService" />
+    <configuration name="QuotesService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.QuotesService" />
       <module name="portfolio" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.CoinPortfolio.portfolio.model.*" />
+          <option name="PATTERN" value="com.CoinPortfolio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,7 +126,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestStart (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.portfolio.TestStart" />
       <module name="portfolio" />
       <extension name="coverage">
@@ -149,12 +139,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="User" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.portfolio.model.User" />
+    <configuration name="TestStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.CoinPortfolio.TestStart" />
       <module name="portfolio" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.CoinPortfolio.portfolio.model.*" />
+          <option name="PATTERN" value="com.CoinPortfolio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,19 +176,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.User" />
-      <item itemvalue="Application.TestStart" />
-      <item itemvalue="Application.PriceService" />
       <item itemvalue="Application.CoinService" />
       <item itemvalue="Application.PortfolioApplication" />
+      <item itemvalue="Application.QuotesService" />
+      <item itemvalue="Application.TestStart (1)" />
+      <item itemvalue="Application.TestStart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestStart (1)" />
         <item itemvalue="Application.TestStart" />
         <item itemvalue="Application.PortfolioApplication" />
         <item itemvalue="Application.CoinService" />
-        <item itemvalue="Application.PriceService" />
-        <item itemvalue="Application.User" />
+        <item itemvalue="Application.QuotesService" />
       </list>
     </recent_temporary>
   </component>
@@ -298,13 +288,18 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="230" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1440.900@0.0.1440.900" timestamp="1636579273954" />
+    <state x="346" y="129" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1636584544643">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="346" y="129" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1440.900@0.0.1440.900" timestamp="1636584544643" />
     <state x="491" y="335" width="467" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1636122631004">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="491" y="335" width="467" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.25.1440.875@0.25.1440.875" timestamp="1636122631004" />
-    <state x="410" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1636469384302">
-      <screen x="0" y="25" width="1440" height="875" />
+    <state x="298" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1636579481732">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="298" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1636579481732" />
     <state x="410" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1440.875@0.25.1440.875" timestamp="1636469384302" />
     <state x="458" y="213" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1636213054213">
       <screen x="0" y="25" width="1440" height="875" />
@@ -326,25 +321,25 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="474" y="369" key="GitRewordDialog/0.25.1440.875@0.25.1440.875" timestamp="1636067215269" />
-    <state width="1398" height="336" key="GridCell.Tab.0.bottom" timestamp="1636578897347">
+    <state width="1398" height="336" key="GridCell.Tab.0.bottom" timestamp="1636587143350">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="336" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1636578897347" />
+    <state width="1398" height="336" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1636587143350" />
     <state width="1398" height="336" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1636572248983" />
-    <state width="1398" height="336" key="GridCell.Tab.0.center" timestamp="1636578897346">
+    <state width="1398" height="336" key="GridCell.Tab.0.center" timestamp="1636587143349">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="336" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1636578897346" />
+    <state width="1398" height="336" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1636587143349" />
     <state width="1398" height="336" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1636572248980" />
-    <state width="1398" height="336" key="GridCell.Tab.0.left" timestamp="1636578897345">
+    <state width="1398" height="336" key="GridCell.Tab.0.left" timestamp="1636587143348">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="336" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1636578897345" />
+    <state width="1398" height="336" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1636587143348" />
     <state width="1398" height="336" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1636572248978" />
-    <state width="1398" height="336" key="GridCell.Tab.0.right" timestamp="1636578897346">
+    <state width="1398" height="336" key="GridCell.Tab.0.right" timestamp="1636587143349">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="336" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1636578897346" />
+    <state width="1398" height="336" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1636587143349" />
     <state width="1398" height="336" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1636572248982" />
     <state width="1398" height="281" key="GridCell.Tab.1.bottom" timestamp="1636484215845">
       <screen x="0" y="25" width="1440" height="875" />
@@ -366,6 +361,10 @@
     </state>
     <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1636061774369" />
     <state width="1398" height="281" key="GridCell.Tab.1.right/0.25.1440.875@0.25.1440.875" timestamp="1636484215844" />
+    <state x="308" y="189" key="IDE.errors.dialog" timestamp="1636583781502">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="308" y="189" key="IDE.errors.dialog/0.0.1440.900@0.0.1440.900" timestamp="1636583781502" />
     <state x="258" y="99" key="Maven.ArtifactSearchDialog" timestamp="1636567516050">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -375,18 +374,19 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="507" y="339" key="RefactorJ.RemoveMiddleman/0.25.1440.875@0.25.1440.875" timestamp="1636210856234" />
-    <state x="208" y="41" key="SettingsEditor" timestamp="1636564794981">
-      <screen x="0" y="25" width="1440" height="875" />
+    <state x="208" y="25" key="SettingsEditor" timestamp="1636587393768">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="208" y="25" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1636587393768" />
     <state x="208" y="41" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1636564794981" />
     <state x="572" y="381" key="VCS.ChangelistChooser" timestamp="1636067498310">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="572" y="381" key="VCS.ChangelistChooser/0.25.1440.875@0.25.1440.875" timestamp="1636067498310" />
-    <state x="516" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1636565815810">
+    <state x="516" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1636584567780">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="516" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1636565815810" />
+    <state x="516" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1636584567780" />
     <state x="516" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.875@0.25.1440.875" timestamp="1636485172625" />
     <state x="158" y="195" width="1123" height="586" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1636307643156">
       <screen x="0" y="25" width="1440" height="875" />
@@ -419,9 +419,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="385" y="210" width="670" height="675" key="run.anything.popup/0.25.1440.875@0.25.1440.875" timestamp="1636119652642" />
-    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1636478719116">
-      <screen x="0" y="25" width="1440" height="875" />
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1636580987952">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1636580987952" />
     <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1636478719116" />
   </component>
 </project>

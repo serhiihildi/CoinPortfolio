@@ -30,7 +30,9 @@ public class User {
     public void takeTotalUserProfit()  {
         BigDecimal userProfitSum = getService().getUserProfitSum(getUserPortfolioList());
         setUserProfit(userProfitSum);
+        logger.info("---------------------------------------");
         logger.info("Общая прибыль пользователя: $" + getUserProfit());
+        logger.info("---------------------------------------");
     }
 
     public Portfolio createNewUserPortfolio(String name) {

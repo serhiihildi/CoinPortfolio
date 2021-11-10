@@ -2,11 +2,15 @@ package com.CoinPortfolio.portfolio.service;
 
 import com.CoinPortfolio.portfolio.impl.CoinServiceImpl;
 import com.CoinPortfolio.portfolio.model.Quotes;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
 import java.util.Map;
 
 public class CoinService implements CoinServiceImpl {
+
+    static final Logger logger = LogManager.getLogger(CoinService.class.getName());
 
     @Override
     public BigDecimal getProfitPercent(BigDecimal actualPrice, BigDecimal userBuyPrice) {
@@ -32,6 +36,10 @@ public class CoinService implements CoinServiceImpl {
 
     @Override
     public BigDecimal getActualCoinPriceBySymbol(String symbol, Map<String, Quotes> coinHashMap) {
+        if (coinHashMap.isEmpty()) {
+            logger.error("Карта актуальных котировок пуста.");
+        }
+
         return coinHashMap.entrySet().stream()
                 .filter(x -> symbol.equals(x.getKey()))
                 .findFirst()

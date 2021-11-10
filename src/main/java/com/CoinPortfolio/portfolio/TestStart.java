@@ -21,7 +21,7 @@ public class TestStart {
                         new TestStart().start();
                         Thread.sleep(900000);
                     } catch (InterruptedException ex) {
-                        logger.error("Error creating a new thread and starting the test application. Class: " + getClass());
+                        logger.error("Error creating a new thread and starting the test application");
                     }
                 }
             }
@@ -35,7 +35,7 @@ public class TestStart {
             addFirstPortfolio();
             addSecondPortfolio();
         } catch (Exception e) {
-            logger.error("Failed to create new user portfolio and add coins: " + e.getClass());
+            logger.error("Failed to create new user portfolio and add coins");
         }
 
         user.getUserPortfolioList().forEach(Portfolio::getGlobalInfo);
@@ -43,7 +43,7 @@ public class TestStart {
         try {
             user.takeTotalUserProfit();
         } catch (Exception e) {
-            logger.error("Failed to get \"Total User Profit\": " + e.getClass());
+            logger.error("Failed to get \"Total User Profit\"");
         }
     }
 
@@ -94,7 +94,7 @@ public class TestStart {
 
         user.setUserPortfolioList(user.getService().addNewUserPortfolioToList(user.getPortfolio()));
     }
-    private void addFirstPortfolio() throws Exception {
+    private void addFirstPortfolio() {
         user.setPortfolio(user.createNewUserPortfolio("Binance"));
 
         user.getPortfolio().addCoinToPortfolio(
