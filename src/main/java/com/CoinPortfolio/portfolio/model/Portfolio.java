@@ -12,6 +12,10 @@ import java.util.Map;
 @Data
 public class Portfolio {
     static final Logger logger = LogManager.getLogger(Portfolio.class.getName());
+    public static final String ANSI_GREEN = "\033[1;92m";
+    public static final String ANSI_GREEN_BACKGROUND = "\033[0;102m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String BLACK_BOLD = "\033[1;30m";
 
     private Map<String, Quotes> priceMap;
     private PortfolioService portfolioService;
@@ -56,9 +60,9 @@ public class Portfolio {
         } catch (Exception e) {
             logger.error("Failed to get full portfolio information. Method error");
         }
-        logger.info("[" + getName() + "]");
-        logger.info("Начальная цена портфеля: $" + getUserInvestmentNumber());
+        logger.info(ANSI_GREEN_BACKGROUND + BLACK_BOLD + "[" + getName() + "]" + ANSI_RESET);
+        logger.info("Начальная цена портфеля: " + getUserInvestmentNumber() );
         logger.info("Актуальная стоимость портфеля: $" + getCurrentUserPortfolioInvestmentNumber());
-        logger.info("Прибыль: $" + getProfileProfitNumber());
+        logger.info("Прибыль: " + ANSI_GREEN + "$" + getProfileProfitNumber() + ANSI_RESET);
     }
 }

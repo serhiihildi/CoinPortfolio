@@ -7,6 +7,12 @@ import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
 
+/*
+    Контроллер дергает Сервис - сервис дергает DAO
+ */
+
+
+
 public class TestStart {
     static final Logger logger = LogManager.getLogger(TestStart.class.getName());
     private User user;

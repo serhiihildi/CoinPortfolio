@@ -19,6 +19,8 @@ public class User {
     private BigDecimal userProfit;
 
     static final Logger logger = LogManager.getLogger(User.class.getName());
+    public static final String ANSI_GREEN_BACKGROUND = "\033[1;92m";
+    public static final String ANSI_RESET = "\u001B[0m";
 
     public User() {
         setName("Новый юзер");
@@ -31,13 +33,13 @@ public class User {
         BigDecimal userProfitSum = getService().getUserProfitSum(getUserPortfolioList());
         setUserProfit(userProfitSum);
         logger.info("---------------------------------------");
-        logger.info("Общая прибыль пользователя: $" + getUserProfit());
+        logger.info("Общая прибыль пользователя: " + ANSI_GREEN_BACKGROUND + "$"  + getUserProfit() + ANSI_RESET);
         logger.info("---------------------------------------");
     }
 
     public Portfolio createNewUserPortfolio(String name) {
         if (name.isEmpty()) {
-            logger.error("Failed to create a new portfolio. The passed string is empty. " + getClass());
+            logger.error("Failed to create a new portfolio. The passed string is empty.");
         }
         if (service == null) {
             service = new UserService();
