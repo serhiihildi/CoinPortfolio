@@ -1,5 +1,6 @@
 package com.portfolio.coinportfolio.impl;
 
+import com.portfolio.coinportfolio.model.Portfolio;
 import com.portfolio.coinportfolio.model.Quotes;
 import com.portfolio.coinportfolio.model.Coin;
 
@@ -8,6 +9,18 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public interface PortfolioServiceImpl {
+
+    Map<String, Quotes> getActualQuotes();
+
+    void setGlobalInfo(Portfolio portfolio);
+    void updateCoinList(Portfolio portfolio);
+    void getGlobalInfo(String name, Portfolio portfolio);
+    void getAllCoinInfoAtPortfolio(String name, Portfolio portfolio);
+    void getAllMinusCoinsAtPortfolio(String name, Portfolio portfolio);
+    void getAllPlusCoinsAtPortfolio(String name, Portfolio portfolio);
+    void getCoinsThatGaveMoreThan10Dollars(String name, Portfolio portfolio);
+    void getCoinsThatGaveMoreThan50ProfitPercents(String name, Portfolio portfolio);
+
 
     /**
      *
@@ -33,22 +46,4 @@ public interface PortfolioServiceImpl {
      */
     BigDecimal getCurrentUserPortfolioInvestmentNumber(ArrayList<Coin> coinArrayList);
 
-
-    /**
-     * void
-     * @param coinArrayList
-     * Печатает все Coin содержадиеся в коллекции
-     */
-    void getAllCoinWhichAreContainedAtList(ArrayList<Coin> coinArrayList);
-
-    /**
-     * @param symbol
-     * @param userByuPrice
-     * @param userCoinVolume
-     * @param coinMap
-     * @return UserCoin
-     * Logic allows the user to add their own Coin list to their Portfolio
-     */
-    Coin addCoinToCustomPortfolio(String symbol, BigDecimal userByuPrice,
-                                  BigDecimal userCoinVolume, Map<String, Quotes> coinMap);
 }

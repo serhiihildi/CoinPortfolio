@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public interface UserServiceImpl {
 
-    Portfolio createNewUserPortfolio(String name);
-    ArrayList<Portfolio> addNewUserPortfolioToList(Portfolio portfolio);
     BigDecimal getUserProfitSum(ArrayList<Portfolio> userPortfolio);
+    BigDecimal getCurrentUserPortfolioInvestmentNumber(ArrayList<Portfolio> userPortfolio);
+    void takeTotalUserProfit(ArrayList<Portfolio> userPortfolio);
 }

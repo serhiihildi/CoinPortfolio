@@ -1,220 +1,124 @@
 {
   "name" : "Binance",
-  "userCoinList" : [ {
+  "coinList" : [ {
     "symbol" : "BTCUSDT",
-    "actualPrice" : 65899.32000000,
+    "actualPrice" : 65742.94000000,
     "userBuyPrice" : 48268.405,
-    "userCoinVolume" : 0.00303916,
-    "userInvestment" : 146.69540573980,
-    "lastInvestmentCost" : 200.2785773712000000,
-    "profitPercent" : 37.00,
-    "profit" : 53.5831716314000000
+    "userCoinVolume" : 0.00303916
   }, {
     "symbol" : "ADAUSDT",
-    "actualPrice" : 2.06200000,
+    "actualPrice" : 2.06300000,
     "userBuyPrice" : 2.300333333,
-    "userCoinVolume" : 30.22200904,
-    "userInvestment" : 69.52069478493933032,
-    "lastInvestmentCost" : 62.3177826404800000,
-    "profitPercent" : -10.00,
-    "profit" : -7.20291214445933032
+    "userCoinVolume" : 30.22200904
   }, {
     "symbol" : "ETHUSDT",
-    "actualPrice" : 4678.22000000,
+    "actualPrice" : 4722.91000000,
     "userBuyPrice" : 3747.48,
-    "userCoinVolume" : 0.02400045,
-    "userInvestment" : 89.9412063660,
-    "lastInvestmentCost" : 112.2793851990000000,
-    "profitPercent" : 25.00,
-    "profit" : 22.3381788330000000
+    "userCoinVolume" : 0.02400045
   }, {
     "symbol" : "BNBUSDT",
-    "actualPrice" : 656.50000000,
+    "actualPrice" : 644.50000000,
     "userBuyPrice" : 439.633,
-    "userCoinVolume" : 0.19101295,
-    "userInvestment" : 83.97559624735,
-    "lastInvestmentCost" : 125.4000016750000000,
-    "profitPercent" : 50.00,
-    "profit" : 41.4244054276500000
+    "userCoinVolume" : 0.19101295
   }, {
     "symbol" : "DASHUSDT",
-    "actualPrice" : 231.30000000,
+    "actualPrice" : 233.90000000,
     "userBuyPrice" : 209.525,
-    "userCoinVolume" : 0.12000690,
-    "userInvestment" : 25.14444572250,
-    "lastInvestmentCost" : 27.7575959700000000,
-    "profitPercent" : 11.00,
-    "profit" : 2.6131502475000000
+    "userCoinVolume" : 0.12000690
   }, {
     "symbol" : "WAVESUSDT",
-    "actualPrice" : 23.41000000,
+    "actualPrice" : 23.55000000,
     "userBuyPrice" : 27.790,
-    "userCoinVolume" : 2.00997539,
-    "userInvestment" : 55.85721608810,
-    "lastInvestmentCost" : 47.0535238799000000,
-    "profitPercent" : -15.00,
-    "profit" : -8.8036922082000000
+    "userCoinVolume" : 2.00997539
   }, {
     "symbol" : "LTCUSDT",
-    "actualPrice" : 276.70000000,
+    "actualPrice" : 272.70000000,
     "userBuyPrice" : 191.3,
-    "userCoinVolume" : 0.26076419,
-    "userInvestment" : 49.884189547,
-    "lastInvestmentCost" : 72.1534513730000000,
-    "profitPercent" : 45.00,
-    "profit" : 22.2692618260000000
+    "userCoinVolume" : 0.26076419
   }, {
     "symbol" : "THETAUSDT",
-    "actualPrice" : 7.10000000,
+    "actualPrice" : 7.05400000,
     "userBuyPrice" : 6.9015,
-    "userCoinVolume" : 3.30010344,
-    "userInvestment" : 22.775663891160,
-    "lastInvestmentCost" : 23.4307344240000000,
-    "profitPercent" : 3.00,
-    "profit" : 0.6550705328400000
+    "userCoinVolume" : 3.30010344
   }, {
     "symbol" : "DOTUSDT",
-    "actualPrice" : 47.04000000,
+    "actualPrice" : 46.96000000,
     "userBuyPrice" : 31.090,
-    "userCoinVolume" : 1.4567228,
-    "userInvestment" : 45.2895118520,
-    "lastInvestmentCost" : 68.524240512000000,
-    "profitPercent" : 52.00,
-    "profit" : 23.234728660000000
+    "userCoinVolume" : 1.4567228
   }, {
     "symbol" : "XRPUSDT",
-    "actualPrice" : 1.20350000,
+    "actualPrice" : 1.20160000,
     "userBuyPrice" : 1.20295,
-    "userCoinVolume" : 36.98182385,
-    "userInvestment" : 44.4872850003575,
-    "lastInvestmentCost" : 44.5076250034750000,
-    "profitPercent" : 1.00,
-    "profit" : 0.0203400031175000
+    "userCoinVolume" : 36.98182385
   }, {
     "symbol" : "FLOWUSDT",
-    "actualPrice" : 12.99000000,
+    "actualPrice" : 13.89000000,
     "userBuyPrice" : 22.860,
-    "userCoinVolume" : 1.76823000,
-    "userInvestment" : 40.42173780000,
-    "lastInvestmentCost" : 22.9693077000000000,
-    "profitPercent" : -43.00,
-    "profit" : -17.4524301000000000
+    "userCoinVolume" : 1.76823000
   }, {
     "symbol" : "KAVAUSDT",
-    "actualPrice" : 5.67300000,
+    "actualPrice" : 5.67000000,
     "userBuyPrice" : 7.1145,
-    "userCoinVolume" : 5.60959568,
-    "userInvestment" : 39.909468465360,
-    "lastInvestmentCost" : 31.8232362926400000,
-    "profitPercent" : -20.00,
-    "profit" : -8.0862321727200000
+    "userCoinVolume" : 5.60959568
   }, {
     "symbol" : "NEOUSDT",
-    "actualPrice" : 48.88000000,
+    "actualPrice" : 48.73000000,
     "userBuyPrice" : 53.780,
-    "userCoinVolume" : 0.73926,
-    "userInvestment" : 39.75740280,
-    "lastInvestmentCost" : 36.1350288000000,
-    "profitPercent" : -9.00,
-    "profit" : -3.6223740000000
+    "userCoinVolume" : 0.73926
   }, {
     "symbol" : "SOLUSDT",
-    "actualPrice" : 240.75000000,
+    "actualPrice" : 245.43000000,
     "userBuyPrice" : 144.883,
-    "userCoinVolume" : 0.27222889,
-    "userInvestment" : 39.44133826987,
-    "lastInvestmentCost" : 65.5391052675000000,
-    "profitPercent" : 67.00,
-    "profit" : 26.0977669976300000
+    "userCoinVolume" : 0.27222889
   }, {
     "symbol" : "AXSUSDT",
-    "actualPrice" : 144.01000000,
+    "actualPrice" : 143.79000000,
     "userBuyPrice" : 138.195,
-    "userCoinVolume" : 0.22977,
-    "userInvestment" : 31.75306515,
-    "lastInvestmentCost" : 33.0891777000000,
-    "profitPercent" : 5.00,
-    "profit" : 1.3361125500000
+    "userCoinVolume" : 0.22977
   }, {
     "symbol" : "ATOMUSDT",
-    "actualPrice" : 32.88000000,
+    "actualPrice" : 33.05000000,
     "userBuyPrice" : 24.145,
-    "userCoinVolume" : 1.23874730,
-    "userInvestment" : 29.90955355850,
-    "lastInvestmentCost" : 40.7300112240000000,
-    "profitPercent" : 37.00,
-    "profit" : 10.8204576655000000
+    "userCoinVolume" : 1.23874730
   }, {
     "symbol" : "BTTUSDT",
-    "actualPrice" : 0.00383400,
+    "actualPrice" : 0.00391400,
     "userBuyPrice" : 0.003869,
-    "userCoinVolume" : 8726.517005,
-    "userInvestment" : 33.762894292345,
-    "lastInvestmentCost" : 33.45746619717000,
-    "profitPercent" : 0.00,
-    "profit" : -0.30542809517500
+    "userCoinVolume" : 8726.517005
   }, {
     "symbol" : "MATICUSDT",
-    "actualPrice" : 1.73600000,
+    "actualPrice" : 1.74800000,
     "userBuyPrice" : 1.335,
-    "userCoinVolume" : 15.05294063,
-    "userInvestment" : 20.09567574105,
-    "lastInvestmentCost" : 26.1319049336800000,
-    "profitPercent" : 31.00,
-    "profit" : 6.0362291926300000
+    "userCoinVolume" : 15.05294063
   }, {
     "symbol" : "ONEUSDT",
-    "actualPrice" : 0.27530000,
+    "actualPrice" : 0.28358000,
     "userBuyPrice" : 0.12967,
-    "userCoinVolume" : 154.25336116,
-    "userInvestment" : 20.0020333416172,
-    "lastInvestmentCost" : 42.4659503273480000,
-    "profitPercent" : 113.00,
-    "profit" : 22.4639169857308000
+    "userCoinVolume" : 154.25336116
   }, {
     "symbol" : "XLMUSDT",
-    "actualPrice" : 0.38210000,
+    "actualPrice" : 0.39000000,
     "userBuyPrice" : 0.3768,
-    "userCoinVolume" : 53.01280070,
-    "userInvestment" : 19.975223303760,
-    "lastInvestmentCost" : 20.2561911474700000,
-    "profitPercent" : 2.00,
-    "profit" : 0.2809678437100000
+    "userCoinVolume" : 53.01280070
   }, {
     "symbol" : "LUNAUSDT",
-    "actualPrice" : 51.34000000,
+    "actualPrice" : 51.12000000,
     "userBuyPrice" : 35.860,
-    "userCoinVolume" : 0.89016859,
-    "userInvestment" : 31.92144563740,
-    "lastInvestmentCost" : 45.7012554106000000,
-    "profitPercent" : 44.00,
-    "profit" : 13.7798097732000000
+    "userCoinVolume" : 0.89016859
   }, {
     "symbol" : "XTZUSDT",
-    "actualPrice" : 5.87200000,
+    "actualPrice" : 5.86300000,
     "userBuyPrice" : 5.414,
-    "userCoinVolume" : 3.59801677,
-    "userInvestment" : 19.47966279278,
-    "lastInvestmentCost" : 21.1275544734400000,
-    "profitPercent" : 9.00,
-    "profit" : 1.6478916806600000
+    "userCoinVolume" : 3.59801677
   }, {
     "symbol" : "SRMUSDT",
-    "actualPrice" : 7.02500000,
+    "actualPrice" : 7.12400000,
     "userBuyPrice" : 7.9465,
-    "userCoinVolume" : 4.09661851,
-    "userInvestment" : 32.553778989715,
-    "lastInvestmentCost" : 28.7787450327500000,
-    "profitPercent" : -11.00,
-    "profit" : -3.7750339569650000
+    "userCoinVolume" : 4.09661851
   }, {
     "symbol" : "CELOUSDT",
-    "actualPrice" : 5.83600000,
+    "actualPrice" : 5.82300000,
     "userBuyPrice" : 5.400,
-    "userCoinVolume" : 1.80000000,
-    "userInvestment" : 9.72000000000,
-    "lastInvestmentCost" : 10.5048000000000000,
-    "profitPercent" : 9.00,
-    "profit" : 0.7848000000000000
+    "userCoinVolume" : 1.80000000
   } ]
 }

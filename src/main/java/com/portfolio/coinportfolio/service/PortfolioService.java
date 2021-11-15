@@ -1,8 +1,12 @@
 package com.portfolio.coinportfolio.service;
 
 import com.portfolio.coinportfolio.impl.PortfolioServiceImpl;
-import com.portfolio.coinportfolio.model.Quotes;
 import com.portfolio.coinportfolio.model.Coin;
+import com.portfolio.coinportfolio.model.Portfolio;
+import com.portfolio.coinportfolio.model.Price;
+import com.portfolio.coinportfolio.model.Quotes;
+import lombok.Getter;
+import lombok.Setter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -12,9 +16,113 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Map;
 
+import static com.portfolio.coinportfolio.service.CoinService.ANSI_GREEN_BOLD;
+import static com.portfolio.coinportfolio.service.CoinService.ANSI_RED_BOLD;
+
 public class PortfolioService implements PortfolioServiceImpl {
 
-    static final Logger logger = LogManager.getLogger(PortfolioService.class.getName());
+    static final Logger log = LogManager.getLogger(PortfolioService.class.getName());
+
+    @Getter @Setter
+    private Map<String, Quotes> priceMap;
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String BLACK_BOLD = "\033[1;30m";
+    public static final String PURPLE_BACKGROUND = "\033[45m";
+
+    @Override
+    public Map<String, Quotes> getActualQuotes() {
+        Price price = new Price();
+        if (getPriceMap() == null) {
+            setPriceMap(price.getPriceMap());
+        }
+        return price.getPriceMap();
+    }
+
+    @Override
+    public void setGlobalInfo(Portfolio portfolio) {
+        portfolio.setUserInvestmentNumber(getUserInvestmentNumber(portfolio.getCoinList()));
+        portfolio.setCurrentUserPortfolioInvestmentNumber(getCurrentUserPortfolioInvestmentNumber(portfolio.getCoinList()));
+        portfolio.setProfileProfitNumber(getProfileProfit(portfolio.getCoinList()));
+    }
+
+    public void updateCoinList(Portfolio pfList) {
+        CoinService service = new CoinService();
+        for (Coin coin : pfList.getCoinList()) {
+            service.updateCoin(
+                    coin,
+                    getActualQuotes()
+            );
+        }
+    }
+
+    @Override
+    public void getGlobalInfo(String name, Portfolio portfolio) {
+        try {
+            setGlobalInfo(portfolio);
+        } catch (Exception e) {
+            log.error("Failed to get full portfolio information. Method error");
+        }
+        log.info(getEditedPortfolioName(name));
+        log.info("Начальная цена портфеля: $" + portfolio.getUserInvestmentNumber());
+        log.info("Актуальная стоимость портфеля: $" + portfolio.getCurrentUserPortfolioInvestmentNumber());
+        log.info("Прибыль: " + checkProfitAndTakeTrueColor(portfolio.getProfileProfitNumber()));
+    }
+
+    private String checkProfitAndTakeTrueColor(BigDecimal profileProfitNumber) {
+        if (profileProfitNumber.signum() < 0) {
+            return ANSI_RED_BOLD + '$' + profileProfitNumber + ANSI_RESET;
+        }
+        return ANSI_GREEN_BOLD + '$' + profileProfitNumber + ANSI_RESET;
+    }
+
+    @Override
+    public void getAllCoinInfoAtPortfolio(String name, Portfolio portfolio) {
+        log.info(getEditedPortfolioName(name));
+        for (Coin coin : portfolio.getCoinList()) {
+            CoinService service = new CoinService();
+            service.getAllInfoAboutCoin(coin);
+        }
+    }
+
+    public String getEditedPortfolioName(String name) {
+        return PURPLE_BACKGROUND + BLACK_BOLD + "[" + name + "]" + ANSI_RESET;
+    }
+
+    @Override
+    public void getAllMinusCoinsAtPortfolio(String name, Portfolio portfolio) {
+        getEditedPortfolioName(name);
+        for (Coin coin : portfolio.getCoinList()) {
+            CoinService service = new CoinService();
+            service.getAllMinusCoinsAtPortfolio(coin);
+        }
+    }
+
+    @Override
+    public void getAllPlusCoinsAtPortfolio(String name, Portfolio portfolio) {
+        getEditedPortfolioName(name);
+        for (Coin coin : portfolio.getCoinList()) {
+            CoinService service = new CoinService();
+            service.getAllPlusCoinsAtPortfolio(coin);
+        }
+    }
+
+    @Override
+    public void getCoinsThatGaveMoreThan10Dollars(String name, Portfolio portfolio) {
+        getEditedPortfolioName(name);
+        for (Coin coin : portfolio.getCoinList()) {
+            CoinService service = new CoinService();
+            service.getCoinsThatGaveMoreThan10Dollars(coin);
+        }
+    }
+
+    @Override
+    public void getCoinsThatGaveMoreThan50ProfitPercents(String name, Portfolio portfolio) {
+        getEditedPortfolioName(name);
+        for (Coin coin : portfolio.getCoinList()) {
+            CoinService service = new CoinService();
+            service.getCoinsThatGaveMoreThan50ProfitPercents(coin);
+        }
+    }
 
     /**
      *
@@ -53,7 +161,7 @@ public class PortfolioService implements PortfolioServiceImpl {
 
     private void checkCoinArrayList(ArrayList<Coin> coinArrayList) {
         if (coinArrayList.isEmpty()) {
-            logger.error("Failed to get (as a passed parameter) the list of available coins from the user.");
+            log.error("Failed to get (as a passed parameter) the list of available coins from the user.");
         }
     }
 
@@ -74,32 +182,5 @@ public class PortfolioService implements PortfolioServiceImpl {
                     .plus(new MathContext(4,RoundingMode.HALF_UP));
         }
         return sumOfLastInvestmentCost;
-    }
-
-    /**
-     * void
-     * @param coinArrayList
-     * Печатает все Coin содержадиеся в коллекции
-     */
-    @Override
-    public void getAllCoinWhichAreContainedAtList(ArrayList<Coin> coinArrayList) {
-        coinArrayList.forEach(System.out::println);
-    }
-
-    /**
-     *
-     * @param symbol
-     * @param userByuPrice
-     * @param userCoinVolume
-     * @param coinMap
-     * @return UserCoin
-     * Logic allows the user to add their own Coin list to their Portfolio
-     */
-    @Override
-    public Coin addCoinToCustomPortfolio(String symbol, BigDecimal userByuPrice, BigDecimal userCoinVolume, Map<String, Quotes> coinMap) {
-        return new Coin(
-                symbol, userByuPrice,
-                userCoinVolume, coinMap
-        );
     }
 }
