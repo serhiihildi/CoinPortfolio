@@ -1,8 +1,8 @@
-package com.CoinPortfolio.portfolio.service;
+package com.portfolio.coinportfolio.service;
 
-import com.CoinPortfolio.portfolio.impl.PortfolioServiceImpl;
-import com.CoinPortfolio.portfolio.model.Quotes;
-import com.CoinPortfolio.portfolio.model.UserCoin;
+import com.portfolio.coinportfolio.impl.PortfolioServiceImpl;
+import com.portfolio.coinportfolio.model.Quotes;
+import com.portfolio.coinportfolio.model.Coin;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,12 +23,11 @@ public class PortfolioService implements PortfolioServiceImpl {
      * Logic allowing the user to get the total return on the portfolio
      */
     @Override
-    public BigDecimal getProfileProfit(ArrayList<UserCoin> coinArrayList) {
+    public BigDecimal getProfileProfit(ArrayList<Coin> coinArrayList) {
         BigDecimal profitSum = BigDecimal.ZERO;
-        if (coinArrayList.isEmpty()) {
-            logger.error("Failed to get (as a passed parameter) the list of available coins from the user.");
-        }
-        for (UserCoin value : coinArrayList) {
+        checkCoinArrayList(coinArrayList);
+
+        for (Coin value : coinArrayList) {
             BigDecimal profit = value.getProfit();
             profitSum = profit.add(profitSum).plus(new MathContext(4, RoundingMode.HALF_UP));
         }
@@ -42,16 +41,20 @@ public class PortfolioService implements PortfolioServiceImpl {
      * Logic allowing the user to get the value of the initial investment in the portfolio
      */
     @Override
-    public BigDecimal getUserInvestmentNumber(ArrayList<UserCoin> coinArrayList) {
-        if (coinArrayList.isEmpty()) {
-            logger.error("Failed to get (as a passed parameter) the list of available coins from the user.");
-        }
+    public BigDecimal getUserInvestmentNumber(ArrayList<Coin> coinArrayList) {
+        checkCoinArrayList(coinArrayList);
         BigDecimal userInvestmentSum = BigDecimal.ZERO;
-        for (UserCoin value : coinArrayList) {
+        for (Coin value : coinArrayList) {
             BigDecimal userInvestment = value.getUserInvestment();
             userInvestmentSum = userInvestment.add(userInvestmentSum).plus(new MathContext(4, RoundingMode.HALF_UP));
         }
         return userInvestmentSum;
+    }
+
+    private void checkCoinArrayList(ArrayList<Coin> coinArrayList) {
+        if (coinArrayList.isEmpty()) {
+            logger.error("Failed to get (as a passed parameter) the list of available coins from the user.");
+        }
     }
 
     /**
@@ -61,12 +64,10 @@ public class PortfolioService implements PortfolioServiceImpl {
      * Logic allowing the user to get the actual value of the portfolio
      */
     @Override
-    public BigDecimal getCurrentUserPortfolioInvestmentNumber(ArrayList<UserCoin> coinArrayList) {
-        if (coinArrayList.isEmpty()) {
-            logger.error("Failed to get (as a passed parameter) the list of available coins from the user.");
-        }
+    public BigDecimal getCurrentUserPortfolioInvestmentNumber(ArrayList<Coin> coinArrayList) {
+        checkCoinArrayList(coinArrayList);
         BigDecimal sumOfLastInvestmentCost = BigDecimal.ZERO;
-        for (UserCoin value : coinArrayList) {
+        for (Coin value : coinArrayList) {
             BigDecimal lastInvestmentCost = value.getLastInvestmentCost();
             sumOfLastInvestmentCost = lastInvestmentCost
                     .add(sumOfLastInvestmentCost)
@@ -81,7 +82,7 @@ public class PortfolioService implements PortfolioServiceImpl {
      * Печатает все Coin содержадиеся в коллекции
      */
     @Override
-    public void getAllCoinWhichAreContainedAtList(ArrayList<UserCoin> coinArrayList) {
+    public void getAllCoinWhichAreContainedAtList(ArrayList<Coin> coinArrayList) {
         coinArrayList.forEach(System.out::println);
     }
 
@@ -95,12 +96,10 @@ public class PortfolioService implements PortfolioServiceImpl {
      * Logic allows the user to add their own Coin list to their Portfolio
      */
     @Override
-    public UserCoin addCoinToCustomPortfolio(String symbol, BigDecimal userByuPrice, BigDecimal userCoinVolume, Map<String, Quotes> coinMap) {
-        return new UserCoin(
+    public Coin addCoinToCustomPortfolio(String symbol, BigDecimal userByuPrice, BigDecimal userCoinVolume, Map<String, Quotes> coinMap) {
+        return new Coin(
                 symbol, userByuPrice,
                 userCoinVolume, coinMap
         );
     }
-
-
 }

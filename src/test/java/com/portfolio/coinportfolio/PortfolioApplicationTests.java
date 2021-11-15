@@ -1,4 +1,4 @@
-package com.CoinPortfolio.portfolio;
+package com.portfolio.coinportfolio;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

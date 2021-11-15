@@ -1,6 +1,6 @@
-package com.CoinPortfolio.portfolio.model;
+package com.portfolio.coinportfolio.model;
 
-import com.CoinPortfolio.portfolio.service.QuotesService;
+import com.portfolio.coinportfolio.service.QuotesService;
 
 import java.util.Map;
 

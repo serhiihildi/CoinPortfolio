@@ -1,4 +1,4 @@
-package com.CoinPortfolio.portfolio.model;
+package com.portfolio.coinportfolio.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,17 +1,15 @@
-package com.CoinPortfolio.portfolio;
+package com.portfolio.coinportfolio;
 
-import com.CoinPortfolio.portfolio.model.Portfolio;
-import com.CoinPortfolio.portfolio.model.User;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.portfolio.coinportfolio.model.Portfolio;
+import com.portfolio.coinportfolio.model.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.File;
+import java.io.IOException;
 import java.math.BigDecimal;
-
-/*
-    Контроллер дергает Сервис - сервис дергает DAO
- */
-
-
 
 public class TestStart {
     static final Logger logger = LogManager.getLogger(TestStart.class.getName());
@@ -44,12 +42,46 @@ public class TestStart {
             logger.error("Failed to create new user portfolio and add coins");
         }
 
+//        takeAJsonFile();
+
+
+        // Показать все монеты
+        user.getUserPortfolioList().forEach(Portfolio::getAllCoinInfoAtPortfolio);
+
+        // Показать все минусовые монеты
+//        user.getUserPortfolioList().forEach(Portfolio::getAllMinusCoinsAtPortfolio);
+
+        // Показать все плюсовые монеты
+//        user.getUserPortfolioList().forEach(Portfolio::getAllPlusCoinsAtPortfolio);
+
+        // Показать монеты, которые дали больше 10$
+//        user.getUserPortfolioList().forEach(Portfolio::getCoinsThatGaveMoreThan10Dollars);
+
+        // Показать монеты, которые дали больше 50%
+//        user.getUserPortfolioList().forEach(Portfolio::getCoinsThatGaveMoreThan50ProfitPercents);
+
+        // Показать всю глобальную информацию о портфеле
         user.getUserPortfolioList().forEach(Portfolio::getGlobalInfo);
-//        user.getUserPortfolioList().forEach(System.out::println);
+
         try {
+//            // Показать общую прибыль пользователя
             user.takeTotalUserProfit();
         } catch (Exception e) {
             logger.error("Failed to get \"Total User Profit\"");
+        }
+    }
+
+    private void takeAJsonFile() {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+        for (Portfolio portfolio : user.getUserPortfolioList()) {
+            try {
+                File file = new File(portfolio.getName() + ".json");
+                mapper.writeValue(file, portfolio);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

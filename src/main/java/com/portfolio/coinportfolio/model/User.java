@@ -1,6 +1,6 @@
-package com.CoinPortfolio.portfolio.model;
+package com.portfolio.coinportfolio.model;
 
-import com.CoinPortfolio.portfolio.service.UserService;
+import com.portfolio.coinportfolio.service.UserService;
 import lombok.Data;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

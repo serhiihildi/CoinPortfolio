@@ -1,7 +1,7 @@
-package com.CoinPortfolio.portfolio.service;
+package com.portfolio.coinportfolio.service;
 
-import com.CoinPortfolio.portfolio.impl.QuotesServiceImpl;
-import com.CoinPortfolio.portfolio.model.Quotes;
+import com.portfolio.coinportfolio.impl.QuotesServiceImpl;
+import com.portfolio.coinportfolio.model.Quotes;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
@@ -29,6 +29,8 @@ public class QuotesService implements QuotesServiceImpl {
             src = new URL(URL_BINANCE);
         } catch (MalformedURLException e) {
             logger.error("Failed to connect to the site: " + URL_BINANCE);
+            //TODO: сделать свой
+            throw new RuntimeException(e);
         }
 
         try {

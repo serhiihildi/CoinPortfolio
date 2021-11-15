@@ -1,7 +1,7 @@
-package com.CoinPortfolio.portfolio.impl;
+package com.portfolio.coinportfolio.impl;
 
-import com.CoinPortfolio.portfolio.model.Quotes;
-import com.CoinPortfolio.portfolio.model.UserCoin;
+import com.portfolio.coinportfolio.model.Quotes;
+import com.portfolio.coinportfolio.model.Coin;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ public interface PortfolioServiceImpl {
      * @return BigDecimal
      * Logic allowing the user to get the total return on the portfolio
      */
-    BigDecimal getProfileProfit(ArrayList<UserCoin> coinArrayList);
+    BigDecimal getProfileProfit(ArrayList<Coin> coinArrayList);
 
     /**
      *
@@ -23,7 +23,7 @@ public interface PortfolioServiceImpl {
      * @return BigDecimal
      * Logic allowing the user to get the value of the initial investment in the portfolio
      */
-    BigDecimal getUserInvestmentNumber(ArrayList<UserCoin> coinArrayList);
+    BigDecimal getUserInvestmentNumber(ArrayList<Coin> coinArrayList);
 
     /**
      *
@@ -31,7 +31,7 @@ public interface PortfolioServiceImpl {
      * @return BigDecimal
      * Logic allowing the user to get the actual value of the portfolio
      */
-    BigDecimal getCurrentUserPortfolioInvestmentNumber(ArrayList<UserCoin> coinArrayList);
+    BigDecimal getCurrentUserPortfolioInvestmentNumber(ArrayList<Coin> coinArrayList);
 
 
     /**
@@ -39,7 +39,7 @@ public interface PortfolioServiceImpl {
      * @param coinArrayList
      * Печатает все Coin содержадиеся в коллекции
      */
-    void getAllCoinWhichAreContainedAtList(ArrayList<UserCoin> coinArrayList);
+    void getAllCoinWhichAreContainedAtList(ArrayList<Coin> coinArrayList);
 
     /**
      * @param symbol
@@ -49,6 +49,6 @@ public interface PortfolioServiceImpl {
      * @return UserCoin
      * Logic allows the user to add their own Coin list to their Portfolio
      */
-    UserCoin addCoinToCustomPortfolio(String symbol, BigDecimal userByuPrice,
-                                        BigDecimal userCoinVolume, Map<String, Quotes> coinMap);
+    Coin addCoinToCustomPortfolio(String symbol, BigDecimal userByuPrice,
+                                  BigDecimal userCoinVolume, Map<String, Quotes> coinMap);
 }

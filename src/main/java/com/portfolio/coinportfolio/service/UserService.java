@@ -1,7 +1,7 @@
-package com.CoinPortfolio.portfolio.service;
+package com.portfolio.coinportfolio.service;
 
-import com.CoinPortfolio.portfolio.impl.UserServiceImpl;
-import com.CoinPortfolio.portfolio.model.Portfolio;
+import com.portfolio.coinportfolio.impl.UserServiceImpl;
+import com.portfolio.coinportfolio.model.Portfolio;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

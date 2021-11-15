@@ -8,10 +8,10 @@
 		<version>2.5.6</version>
 		<relativePath/>
 	</parent>
-	<groupId>com.coin-portfolio</groupId>
-	<artifactId>portfolio</artifactId>
+	<groupId>com.portfolio</groupId>
+	<artifactId>coin-portfolio</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<name>coin-portfolio</name>
 	<description>Portfolio Tracking Web Pet Application</description>
 	<properties>
 		<java.version>11</java.version>
@@ -50,14 +50,26 @@
 			<version>${spring-boot.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>${jackson-databind.version}</version>
-		</dependency>
-		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

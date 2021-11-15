@@ -1,11 +1,12 @@
-package com.CoinPortfolio.portfolio.service;
+package com.portfolio.coinportfolio.service;
 
-import com.CoinPortfolio.portfolio.impl.CoinServiceImpl;
-import com.CoinPortfolio.portfolio.model.Quotes;
+import com.portfolio.coinportfolio.impl.CoinServiceImpl;
+import com.portfolio.coinportfolio.model.Quotes;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Map;
 
 public class CoinService implements CoinServiceImpl {
@@ -14,9 +15,8 @@ public class CoinService implements CoinServiceImpl {
 
     @Override
     public BigDecimal getProfitPercent(BigDecimal actualPrice, BigDecimal userBuyPrice) {
-            return ((actualPrice.subtract(userBuyPrice))
-                    .divide(userBuyPrice, 2,2))
-                    .multiply(new BigDecimal(100));
+            return ((actualPrice.subtract(userBuyPrice)).divide(userBuyPrice, 2, 2))
+                    .multiply(new BigDecimal(100)).setScale(2, RoundingMode.DOWN);
     }
 
     @Override

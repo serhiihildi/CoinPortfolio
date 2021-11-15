@@ -1,6 +1,6 @@
-package com.CoinPortfolio.portfolio.impl;
+package com.portfolio.coinportfolio.impl;
 
-import com.CoinPortfolio.portfolio.model.Quotes;
+import com.portfolio.coinportfolio.model.Quotes;
 
 import java.math.BigDecimal;
 import java.util.Map;

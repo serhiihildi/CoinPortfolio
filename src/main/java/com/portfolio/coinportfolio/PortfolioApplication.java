@@ -1,4 +1,4 @@
-package com.CoinPortfolio.portfolio;
+package com.portfolio.coinportfolio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
