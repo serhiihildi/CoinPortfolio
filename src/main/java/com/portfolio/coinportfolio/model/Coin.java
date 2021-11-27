@@ -1,25 +1,34 @@
 package com.portfolio.coinportfolio.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 
+@Entity
+@Table(name = "coins")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Coin {
-    @NonNull
-    private String symbol;
-    @NonNull
-    private BigDecimal userBuyPrice;
-    @NonNull
-    private BigDecimal userCoinVolume;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
+    @Column(name = "symbol")
+    @NonNull private String symbol;
+    @Column(name = "buyPrice")
+    @NonNull private BigDecimal userBuyPrice;
+    @Column(name = "CoinVolume")
+    @NonNull private BigDecimal userCoinVolume;
+    @Column(name = "actualPrice")
     private BigDecimal actualPrice;
+    @Column(name = "investment")
     private BigDecimal userInvestment;
+    @Column(name = "lastInvestment")
     private BigDecimal lastInvestmentCost;
-    private BigDecimal profitPercent;
+    @Column(name = "profitPercent")
+    private int profitPercent;
+    @Column(name = "profit")
     private BigDecimal profit;
 }

@@ -4,8 +4,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.portfolio.coinportfolio.model.Portfolio;
 import com.portfolio.coinportfolio.model.User;
-import com.portfolio.coinportfolio.service.PortfolioService;
-import com.portfolio.coinportfolio.service.UserService;
+import com.portfolio.coinportfolio.service.impl.PortfolioServiceImpl;
+import com.portfolio.coinportfolio.service.impl.UserServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,7 +24,8 @@ public class TestStart {
                 while (true) {
                     try {
                         new TestStart().start();
-                        Thread.sleep(900000);
+                        Thread.sleep(300000);
+//                        Thread.sleep(900000);
                     } catch (InterruptedException ex) {
                         logger.error("Error creating a new thread and starting the test application");
                     }
@@ -42,8 +43,10 @@ public class TestStart {
             logger.error("Failed to create new user portfolio and add coins");
         }
 
-        for (Portfolio portfolio : user.getUserPortfolioList()) {
-            PortfolioService service = new PortfolioService();
+        ArrayList<Portfolio> userPortfolioList = user.getUserPortfolioList();
+
+        for (Portfolio portfolio : userPortfolioList) {
+            PortfolioServiceImpl service = new PortfolioServiceImpl();
             String name = portfolio.getName();
 
             // Показать все монеты
@@ -59,20 +62,29 @@ public class TestStart {
 //            service.getCoinsThatGaveMoreThan10Dollars(name, portfolio);
 
             // Показать монеты, которые дали больше 50%
-//            service.getCoinsThatGaveMoreThan50ProfitPercents(name, portfolio);
+//            service.getCoinsThatGaveMoreThan500ProfitPercents(name, portfolio);
         }
 
-        for (Portfolio portfolio : user.getUserPortfolioList()) {
-            PortfolioService service = new PortfolioService();
+        for (Portfolio portfolio : userPortfolioList) {
+            PortfolioServiceImpl service = new PortfolioServiceImpl();
             String name = portfolio.getName();
             // Показать всю глобальную информацию о портфеле
             service.getGlobalInfo(name, portfolio);
+
+            // Показать количество монет, которые себя "отбили"
+            service.showTheNumberOfCoinsThatRecapturedThemselves(portfolio);
+            // Показать количество монет, которые дали более 2 иксов
+            service.showTheNumberOfCoinsThatGaveMoreThan2x(portfolio);
+            // Показать количество монет, которые дали более 5 иксов
+            service.showTheNumberOfCoinsThatGaveMoreThan5x(portfolio);
+            // Показать количество монет, которые дали более 10 иксов
+            service.showTheNumberOfCoinsThatGaveMoreThan10x(portfolio);
         }
 
         try {
             // Показать общую прибыль пользователя
-            UserService userService = new UserService();
-            userService.takeTotalUserProfit(user.getUserPortfolioList());
+            UserServiceImpl userService = new UserServiceImpl();
+            userService.takeTotalUserProfit(userPortfolioList);
         } catch (Exception e) {
             logger.error("Failed to get \"Total User Profit\"");
         }
@@ -83,10 +95,11 @@ public class TestStart {
             user.setUserPortfolioList(new ArrayList<>());
         }
         user.getUserPortfolioList().add(takeJsonWithCoin("Binance.json"));
+        user.getUserPortfolioList().add(takeJsonWithCoin("BinanceParents.json"));
         user.getUserPortfolioList().add(takeJsonWithCoin("Okex.json"));
 
         for (Portfolio pfList : user.getUserPortfolioList()) {
-            new PortfolioService().updateCoinList(pfList);
+            new PortfolioServiceImpl().updateCoinList(pfList);
         }
     }
 

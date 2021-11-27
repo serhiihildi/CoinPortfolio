@@ -1,6 +1,6 @@
 package com.portfolio.coinportfolio.model;
 
-import com.portfolio.coinportfolio.service.QuotesService;
+import com.portfolio.coinportfolio.service.impl.QuotesServiceImpl;
 import lombok.Data;
 
 import java.util.Map;
@@ -12,7 +12,7 @@ public class Price {
     private String price;
 
     public Price() {
-        QuotesService service = new QuotesService();
+        QuotesServiceImpl service = new QuotesServiceImpl();
         setPriceMap(service.getAMapOfCurrentQuotes());
     }
 }
