@@ -79,6 +79,9 @@ fabric.properties
 # BlueJ files
 *.ctxt
 
+# Json files
+*.json
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
