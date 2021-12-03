@@ -30,6 +30,8 @@ public class Portfolio {
     private BigDecimal profileProfitNumber;
     @Column(name = "currentUserPortfolioInvestmentNumber")
     private BigDecimal currentUserPortfolioInvestmentNumber;
+    @Column(name = "profitPercent")
+    private int profitPercent;
 
     public Portfolio(String name, ArrayList<Coin> coinList) {
         this.name = name;

@@ -46,6 +46,14 @@ public class PortfolioServiceImpl implements PortfolioService {
         portfolio.setUserInvestmentNumber(getUserInvestmentNumber(portfolio.getCoinList()));
         portfolio.setCurrentUserPortfolioInvestmentNumber(getCurrentUserPortfolioInvestmentNumber(portfolio.getCoinList()));
         portfolio.setProfileProfitNumber(getProfileProfit(portfolio.getCoinList()));
+        portfolio.setProfitPercent(getProfitPercent(portfolio.getUserInvestmentNumber(), portfolio.getCurrentUserPortfolioInvestmentNumber()));
+    }
+
+    private int getProfitPercent(BigDecimal userInvestmentNumber, BigDecimal currentUserPortfolioInvestmentNumber) {
+        BigDecimal profitPercent = ((currentUserPortfolioInvestmentNumber.subtract(userInvestmentNumber))
+                .divide(userInvestmentNumber, 2,2))
+                .multiply(new BigDecimal(100));
+        return profitPercent.intValue();
     }
 
     public void updateCoinList(Portfolio pfList) {
@@ -70,8 +78,10 @@ public class PortfolioServiceImpl implements PortfolioService {
         log.info(message);
         String message1 = "Актуальная стоимость портфеля: " + BLUE_BOLD_BRIGHT + "$" + portfolio.getCurrentUserPortfolioInvestmentNumber() + ANSI_RESET;
         log.info(message1);
-        String message2 = "Прибыль: " + checkProfitAndTakeTrueColor(portfolio.getProfileProfitNumber());
+        String message2 = "Процент прибыли портфеля: " + checkProfitAndTakeTrueColor(portfolio.getProfitPercent());
         log.info(message2);
+        String message3 = "Прибыль: " + checkProfitAndTakeTrueColor(portfolio.getProfileProfitNumber());
+        log.info(message3);
     }
 
     private String checkProfitAndTakeTrueColor(BigDecimal profileProfitNumber) {
@@ -79,6 +89,13 @@ public class PortfolioServiceImpl implements PortfolioService {
             return ANSI_RED_BOLD + '$' + profileProfitNumber + ANSI_RESET;
         }
         return ANSI_GREEN_BOLD + '$' + profileProfitNumber + ANSI_RESET;
+    }
+
+    private String checkProfitAndTakeTrueColor(int profileProfitNumber) {
+        if (profileProfitNumber < 0) {
+            return ANSI_RED_BOLD + '-' + profileProfitNumber + '%' + ANSI_RESET;
+        }
+        return ANSI_GREEN_BOLD + '+' + profileProfitNumber + '%' + ANSI_RESET;
     }
 
     @Override
@@ -188,72 +205,29 @@ public class PortfolioServiceImpl implements PortfolioService {
         return sumOfLastInvestmentCost;
     }
 
-    public void showTheNumberOfCoinsThatRecapturedThemselves(Portfolio portfolio) {
+    public void showCoinsThatGaveTheSpecifiedNumberOfProfit(int expectedProfitPercentage, Portfolio portfolio) {
         int num = 0;
         ArrayList<String> symbols = new ArrayList<>();
         for (Coin coin : portfolio.getCoinList()) {
-            if (coin.getProfitPercent() >= 100) {
+            if (coin.getProfitPercent() >= expectedProfitPercentage) {
                 num++;
                 symbols.add(coin.getSymbol());
             }
         }
+
         int size = portfolio.getCoinList().size();
-        String message = ">100%: " + BLUE_BOLD_BRIGHT + num + "/" + size
+
+        String message = getXNumber(expectedProfitPercentage) + BLUE_BOLD_BRIGHT + num + "/" + size
                 + " [" + showSymbols(symbols) + "] " + ANSI_RESET;
         if (num != 0) {
             log.info(message);
         }
     }
 
-    public void showTheNumberOfCoinsThatGaveMoreThan2x(Portfolio portfolio) {
-        int num = 0;
-        ArrayList<String> symbols = new ArrayList<>();
-        for (Coin coin : portfolio.getCoinList()) {
-            if (coin.getProfitPercent() >= 200) {
-                num++;
-                symbols.add(coin.getSymbol());
-            }
-        }
-        int size = portfolio.getCoinList().size();
-        String message = "х2: " + BLUE_BOLD_BRIGHT + num + "/" + size
-                + " [" + showSymbols(symbols) + "] " + ANSI_RESET;
-        if (num != 0) {
-            log.info(message);
-        }
-    }
-
-    public void showTheNumberOfCoinsThatGaveMoreThan5x(Portfolio portfolio) {
-        int num = 0;
-        ArrayList<String> symbols = new ArrayList<>();
-        for (Coin coin : portfolio.getCoinList()) {
-            if (coin.getProfitPercent() >= 500) {
-                num++;
-                symbols.add(coin.getSymbol());
-            }
-        }
-        int size = portfolio.getCoinList().size();
-        String message = "х5: " + BLUE_BOLD_BRIGHT + num + "/" + size
-                + " [" + showSymbols(symbols) + "] " + ANSI_RESET;
-        if (num != 0) {
-            log.info(message);
-        }
-    }
-
-    public void showTheNumberOfCoinsThatGaveMoreThan10x(Portfolio portfolio) {
-        int num = 0;
-        ArrayList<String> symbols = new ArrayList<>();
-        for (Coin coin : portfolio.getCoinList()) {
-            if (coin.getProfitPercent() >= 1000) {
-                num++;
-                symbols.add(coin.getSymbol());
-            }
-        }
-        int size = portfolio.getCoinList().size();
-        String message = "х10: " + BLUE_BOLD_BRIGHT + num + "/" + size
-                + " [" + showSymbols(symbols) + "] " + ANSI_RESET;
-        if (num != 0) {
-            log.info(message);
-        }
+    private String getXNumber(int expectedProfitPercentage) {
+        if (expectedProfitPercentage < 100) {
+            return ">" + expectedProfitPercentage + "%: ";
+        } return expectedProfitPercentage / 100 + "x: ";
     }
 
     private StringBuilder showSymbols(ArrayList<String> symbols) {

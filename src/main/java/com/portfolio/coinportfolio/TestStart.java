@@ -71,14 +71,11 @@ public class TestStart {
             // Показать всю глобальную информацию о портфеле
             service.getGlobalInfo(name, portfolio);
 
-            // Показать количество монет, которые себя "отбили"
-            service.showTheNumberOfCoinsThatRecapturedThemselves(portfolio);
-            // Показать количество монет, которые дали более 2 иксов
-            service.showTheNumberOfCoinsThatGaveMoreThan2x(portfolio);
-            // Показать количество монет, которые дали более 5 иксов
-            service.showTheNumberOfCoinsThatGaveMoreThan5x(portfolio);
-            // Показать количество монет, которые дали более 10 иксов
-            service.showTheNumberOfCoinsThatGaveMoreThan10x(portfolio);
+//            service.showCoinsThatGaveTheSpecifiedNumberOfProfit(50, portfolio);
+            service.showCoinsThatGaveTheSpecifiedNumberOfProfit(100, portfolio);
+            service.showCoinsThatGaveTheSpecifiedNumberOfProfit(200, portfolio);
+            service.showCoinsThatGaveTheSpecifiedNumberOfProfit(500, portfolio);
+            service.showCoinsThatGaveTheSpecifiedNumberOfProfit(1000, portfolio);
         }
 
         try {
