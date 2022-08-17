@@ -17,7 +17,7 @@ import java.util.Map;
 public class PortfolioController {
 
     @Autowired
-    private PortfolioRepo repo;
+    private PortfolioRepo repo1;
 
     @GetMapping("/list_of_portfolio")
     public String greeting(
@@ -28,9 +28,9 @@ public class PortfolioController {
         Iterable<Portfolio> portfolio;
 
         if (filter != null && !filter.isEmpty()) {
-            portfolio = repo.findByPortfolioName(filter);
+            portfolio = repo1.findByPortfolioName(filter);
         } else {
-            portfolio = repo.findAll();
+            portfolio = repo1.findAll();
         }
 
         model.addAttribute("portfolio", portfolio);
@@ -48,9 +48,9 @@ public class PortfolioController {
     ) {
 
         Portfolio portfolio = new Portfolio(portfolioName, coinList);
-        repo.save(portfolio);
+        repo1.save(portfolio);
 
-        Iterable<Portfolio> pf = repo.findAll();
+        Iterable<Portfolio> pf = repo1.findAll();
         model.put("portfolio", pf);
 
         return "PortfolioPage";

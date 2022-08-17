@@ -38,7 +38,34 @@ public class PortfolioServiceImpl implements PortfolioService {
         if (getPriceMap() == null) {
             setPriceMap(new Price().getPriceMap());
         }
-        return getPriceMap();
+    return getPriceMap();
+    }
+
+    public void showBtcCost(String symbol, String symbol2, String symbol3) {
+        Map<String, Quotes> getPriceMap = getActualQuotes();
+        if (!getPriceMap.containsKey(symbol)){
+            log.error("Failed to get cost by symbol. Something trouble with quotes map. " +
+                    "Method: showBtcCost(String symbol)");
+        }
+
+        log.info("------------------------");
+        String message = setText(symbol, getPriceMap) + ", " + setText(symbol2, getPriceMap)
+                + ", " + setText(symbol3, getPriceMap);
+        log.info(message);
+
+    }
+
+    private String setText(String symbol, Map<String, Quotes> getPriceMap) {
+        return setUpperCaseAndSubstringForSymbol(symbol) + ": " + BLUE_BOLD_BRIGHT + "$"
+                + setScaleForSymbols(symbol, getPriceMap) + ANSI_RESET;
+    }
+
+    private String setUpperCaseAndSubstringForSymbol(String symbol) {
+        return symbol.toUpperCase().substring(0, 3);
+    }
+
+    private BigDecimal setScaleForSymbols(String symbol, Map<String, Quotes> getPriceMap) {
+        return getPriceMap.get(symbol).getPrice().setScale(2);
     }
 
     @Override
@@ -93,7 +120,7 @@ public class PortfolioServiceImpl implements PortfolioService {
 
     private String checkProfitAndTakeTrueColor(int profileProfitNumber) {
         if (profileProfitNumber < 0) {
-            return ANSI_RED_BOLD + '-' + profileProfitNumber + '%' + ANSI_RESET;
+            return ANSI_RED_BOLD + profileProfitNumber + '%' + ANSI_RESET;
         }
         return ANSI_GREEN_BOLD + '+' + profileProfitNumber + '%' + ANSI_RESET;
     }
@@ -122,7 +149,7 @@ public class PortfolioServiceImpl implements PortfolioService {
 
     @Override
     public void getAllPlusCoinsAtPortfolio(String name, Portfolio portfolio) {
-        getEditedPortfolioName(name);
+        log.info(getEditedPortfolioName(name));
         for (Coin coin : portfolio.getCoinList()) {
             CoinServiceImpl service = new CoinServiceImpl();
             service.getAllPlusCoinsAtPortfolio(coin);
@@ -206,28 +233,29 @@ public class PortfolioServiceImpl implements PortfolioService {
     }
 
     public void showCoinsThatGaveTheSpecifiedNumberOfProfit(int expectedProfitPercentage, Portfolio portfolio) {
-        int num = 0;
         ArrayList<String> symbols = new ArrayList<>();
+        int num = 0;
+
         for (Coin coin : portfolio.getCoinList()) {
             if (coin.getProfitPercent() >= expectedProfitPercentage) {
                 num++;
-                symbols.add(coin.getSymbol());
+                symbols.add(coin.getSymbol() + ": >$" + coin.getProfit().intValue());
             }
         }
 
         int size = portfolio.getCoinList().size();
 
-        String message = getXNumber(expectedProfitPercentage) + BLUE_BOLD_BRIGHT + num + "/" + size
+        String message = getExpectedProfitPercentage(expectedProfitPercentage) + BLUE_BOLD_BRIGHT + num + "/" + size
                 + " [" + showSymbols(symbols) + "] " + ANSI_RESET;
         if (num != 0) {
             log.info(message);
         }
     }
 
-    private String getXNumber(int expectedProfitPercentage) {
+    private String getExpectedProfitPercentage(int expectedProfitPercentage) {
         if (expectedProfitPercentage < 100) {
             return ">" + expectedProfitPercentage + "%: ";
-        } return expectedProfitPercentage / 100 + "x: ";
+        } return "x" + ((expectedProfitPercentage / 100) + 1) + ": ";
     }
 
     private StringBuilder showSymbols(ArrayList<String> symbols) {

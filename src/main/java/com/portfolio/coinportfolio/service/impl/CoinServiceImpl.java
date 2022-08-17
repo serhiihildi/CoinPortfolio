@@ -66,7 +66,7 @@ public class CoinServiceImpl implements CoinService {
 
     @Override
     public void getAllPlusCoinsAtPortfolio(Coin coin) {
-        if (coin.getProfit().signum() >= 0) {
+        if (coin.getProfit().floatValue() >= 0.0f) {
             getAllInfoAboutCoin(coin);
         }
     }
@@ -112,10 +112,11 @@ public class CoinServiceImpl implements CoinService {
         if (coinHashMap.isEmpty()) {
             log.error("Карта актуальных котировок пуста.");
         }
-        return coinHashMap.entrySet().stream()
-                .filter(x -> symbol.equals(x.getKey()))
+        return coinHashMap.entrySet()
+                .parallelStream()
+                .filter(x -> x.getKey().equals(symbol))
                 .findFirst()
-                .orElse(null)
+                .orElseThrow()
                 .getValue()
                 .getPrice();
     }

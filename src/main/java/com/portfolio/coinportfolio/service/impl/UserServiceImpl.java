@@ -76,7 +76,7 @@ public class UserServiceImpl implements UserService {
         if (number > 0) {
             return ANSI_GREEN_BOLD + '+' + number + '%' + ANSI_RESET;
         } else if (number < 0) {
-            return ANSI_RED_BOLD + '-' + number + '%' + ANSI_RESET;
+            return ANSI_RED_BOLD + number + '%' + ANSI_RESET;
         }
         return ANSI_GREEN_BOLD + number + '%' + ANSI_RESET;
     }

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.portfolio.coinportfolio.model.Portfolio;
 import com.portfolio.coinportfolio.model.User;
 import com.portfolio.coinportfolio.service.impl.PortfolioServiceImpl;
+import com.portfolio.coinportfolio.service.impl.QuotesServiceImpl;
 import com.portfolio.coinportfolio.service.impl.UserServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 public class TestStart {
     static final Logger logger = LogManager.getLogger(TestStart.class.getName());
     private User user;
+    QuotesServiceImpl qsi;
 
     public static void main(String[] args) {
         Thread t = new Thread(new Runnable() {
@@ -75,8 +77,12 @@ public class TestStart {
             service.showCoinsThatGaveTheSpecifiedNumberOfProfit(100, portfolio);
             service.showCoinsThatGaveTheSpecifiedNumberOfProfit(200, portfolio);
             service.showCoinsThatGaveTheSpecifiedNumberOfProfit(500, portfolio);
-            service.showCoinsThatGaveTheSpecifiedNumberOfProfit(1000, portfolio);
+            service.showCoinsThatGaveTheSpecifiedNumberOfProfit(10000, portfolio);
         }
+
+        // Показать курс BTC и ETH
+        PortfolioServiceImpl ps = new PortfolioServiceImpl();
+        ps.showBtcCost("BTCUSDT", "ETHUSDT", "SOLUSDT");
 
         try {
             // Показать общую прибыль пользователя
@@ -85,6 +91,7 @@ public class TestStart {
         } catch (Exception e) {
             logger.error("Failed to get \"Total User Profit\"");
         }
+
     }
 
     private void addPortfolio() {
@@ -94,6 +101,7 @@ public class TestStart {
         user.getUserPortfolioList().add(takeJsonWithCoin("Binance.json"));
         user.getUserPortfolioList().add(takeJsonWithCoin("BinanceParents.json"));
         user.getUserPortfolioList().add(takeJsonWithCoin("Okex.json"));
+        user.getUserPortfolioList().add(takeJsonWithCoin("Alena.json"));
 
         for (Portfolio pfList : user.getUserPortfolioList()) {
             new PortfolioServiceImpl().updateCoinList(pfList);
